@@ -39,6 +39,6 @@ jobs:
       - name: commit file and push
         run: |
           git add post-list.txt
-          git commit -m 'Update posts.txt'
+          git commit -m 'Update posts-list.txt'
           git push
         if: steps.diffs.outputs.count > 0
