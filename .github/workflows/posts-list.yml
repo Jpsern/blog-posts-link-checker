@@ -20,4 +20,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Test...
+          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g"
