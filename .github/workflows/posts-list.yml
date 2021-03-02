@@ -20,7 +20,7 @@ jobs:
           git branch
 
       # サイトマップからURLリスト作成
-      - name: create posts.txt
+      - name: create post-list.txt
         run: |
           curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
 
@@ -28,7 +28,7 @@ jobs:
       - name: check diffs
         id: diffs
         run: |
-          git add posts.txt
+          git add post-list.txt
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       # commit, push 
