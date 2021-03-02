@@ -11,11 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Runs a set of commands using the runners shell
-      - name: create posts.txt
-        run: |
-          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
-
       # Gitの初期設定
       - name: git setting
         run: |        
@@ -23,3 +18,15 @@ jobs:
           git config --local user.name ${{ github.repository_owner }}
           git checkout Jpsern-patch-1
           git branch
+
+      # サイトマップからURLリスト作成
+      - name: create posts.txt
+        run: |
+          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
+
+      # コミットする
+      - name: commit file
+        run: |        
+          git add post-list.txt
+          git commit -m 'Update posts.txt'
+          git push
