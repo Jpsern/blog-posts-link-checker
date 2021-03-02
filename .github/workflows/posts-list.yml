@@ -30,6 +30,7 @@ jobs:
         run: |
           git add post-list.txt
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
+          echo ${{ steps.diffs.outputs.count }}
 
       # commit, push 
 #      - name: commit file and push
