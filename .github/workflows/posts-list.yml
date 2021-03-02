@@ -24,9 +24,16 @@ jobs:
         run: |
           curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
 
+      # 差分の有無を確認する
+      - name: check diffs
+        id: diffs
+        run: |
+          git add posts.txt
+          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
       # commit, push 
-      - name: commit file and push
-        run: |        
-          git add post-list.txt
-          git commit -m 'Update posts.txt'
-          git push
+#      - name: commit file and push
+#        run: |        
+#          git add post-list.txt
+#          git commit -m 'Update posts.txt'
+#          git push
