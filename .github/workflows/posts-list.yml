@@ -1,0 +1,47 @@
+# リンクチェック対象リストを作成するCI
+name: Create Posts list CI
+
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Gitの初期設定
+      - name: git setting
+        run: |        
+          git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
+          git config --local user.name ${{ github.repository_owner }}
+          git checkout master
+          git branch
+
+      # サイトマップからURLリスト作成
+      - name: create post-list.txt
+        run: |
+          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
+
+      # 差分の有無を確認する
+      - name: check diffs
+        id: diffs
+        run: |
+          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
+      # カウント出力テスト
+      - name: print diffs count
+        run: |
+          echo ${{ steps.diffs.outputs.count }}
+
+      # 差分カウントが0以上ならコミットしてプッシュする
+      - name: commit file and push
+        run: |
+          git add post-list.txt
+          git commit -m 'Update posts-list.txt'
+          git push
+        if: steps.diffs.outputs.count > 0
