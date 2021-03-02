@@ -30,6 +30,10 @@ jobs:
         run: |
           git add post-list.txt
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
+      # カウント出力テスト
+      - name: print diffs count
+        run: |
           echo ${{ steps.diffs.outputs.count }}
 
       # commit, push 
