@@ -1,8 +1,9 @@
-name: Posts CI
+# リンクチェック対象リストを作成するCI
+name: Create Posts list CI
 
 on:
   push:
-    branches: [ Jpsern-patch-1 ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -16,7 +17,7 @@ jobs:
         run: |        
           git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
           git config --local user.name ${{ github.repository_owner }}
-          git checkout Jpsern-patch-1
+          git checkout master
           git branch
 
       # サイトマップからURLリスト作成
