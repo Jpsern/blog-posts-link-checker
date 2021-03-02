@@ -23,4 +23,4 @@ jobs:
         run: |
           git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
           git config --local user.name ${{ github.repository_owner }}
-          git config -l
+          git branch
