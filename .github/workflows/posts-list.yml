@@ -2,9 +2,7 @@ name: POSTS-LIST
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ Jpsern-patch-1 ]
 
 jobs:
   build:
@@ -20,7 +18,8 @@ jobs:
 
       # Gitの初期設定
       - name: git setting
-        run: |
+        run: |        
           git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
           git config --local user.name ${{ github.repository_owner }}
+          git checkout Jpsern-patch-1
           git branch
