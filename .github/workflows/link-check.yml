@@ -2,6 +2,8 @@
 name: Link check CI
 
 on:
+  pull_request:
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -18,3 +20,20 @@ jobs:
           git config --local user.name ${{ github.repository_owner }}
           git checkout master
           git branch
+      
+      # Node.js セットアップ
+      # LTSの最新は14系なのでとりあえずそれで指定
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      # 必要なパッケージのインストール
+      - name: Install package
+        run: npm install broken-link-checker -g
+
+      # 実行テスト
+      - name: Exec link-check
+        run: |
+          blc --help
+          blc --version
