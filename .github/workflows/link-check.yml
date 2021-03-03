@@ -33,7 +33,16 @@ jobs:
         run: npm install broken-link-checker -g
 
       # 実行テスト
-      - name: Exec link-check
+      - name: Print help and version
         run: |
           blc --help
           blc --version
+
+      # リンクチェック実行
+      - name: Exec link-check
+        run: |
+          while read url
+            do
+              echo "-------------------------------------------"
+              echo "$url"
+            done < post-list.txt
