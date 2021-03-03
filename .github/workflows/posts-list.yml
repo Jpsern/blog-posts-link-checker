@@ -30,7 +30,7 @@ jobs:
       - name: check diffs
         id: diffs
         run: |
-          git add -N posts-list.txt
+          git add -N post-list.txt
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       # カウント出力テスト
