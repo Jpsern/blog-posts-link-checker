@@ -36,6 +36,17 @@ jobs:
           blc --help
           blc --version
 
+      # 結果用ファイル名の生成
+      - name: Generate result filename
+        id: filename
+        run: |
+          echo "::set-output name=result::result-$(date '+%Y_%m_%d_%H_%M_%S')"
+
+      # 出力テスト
+      - name: Print filename
+        run: |
+          echo ${{ steps.filename.outputs.result }}
+
       # リンクチェック実行
       - name: Exec link-check
         run: |
