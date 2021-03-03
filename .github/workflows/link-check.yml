@@ -43,6 +43,5 @@ jobs:
         run: |
           while read url
             do
-              echo "-------------------------------------------"
               echo "$url"
             done < post-list.txt
