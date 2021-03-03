@@ -48,9 +48,17 @@ jobs:
           echo ${{ steps.filename.outputs.result }}
 
       # リンクチェック実行
+      # あとは出力結果を保存してコミットしてしまえばいいか。
+      # 最後にBROKENの数をファイルからカウントして1つ以上あればCIをコケさせれば
+      # GitHubから失敗した旨のメールが送信されるので通知はそれでいいかな。
       - name: Exec link-check
         run: |
-          while read url
-            do
-              echo "$url"
-            done < post-list.txt
+          FILENAME=${{ steps.filename.outputs.result }}.txt
+          touch $FILENAME
+          echo $FILENAME
+          # while read url
+          # do
+          #   echo Getting links from "$url" >> $FILENAME
+          #   blc "$url" | grep BROKEN >> $FILENAME
+          #   echo "-----------------------" >> $FILENAME
+          # done < post-list.txt
