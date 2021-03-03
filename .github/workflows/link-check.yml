@@ -1,0 +1,20 @@
+# リンクチェックを実行するCI
+name: Link check CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Gitの初期設定
+      - name: git setting
+        run: |        
+          git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
+          git config --local user.name ${{ github.repository_owner }}
+          git checkout master
+          git branch
