@@ -15,11 +15,9 @@ jobs:
 
       # Gitの初期設定
       - name: git setting
-        run: |        
+        run: |
           git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
           git config --local user.name ${{ github.repository_owner }}
-          git fetch origin
-          git branch
       
       # Node.js セットアップ
       # LTSの最新は14系なのでとりあえずそれで指定
