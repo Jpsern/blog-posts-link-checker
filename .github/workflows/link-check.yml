@@ -10,21 +10,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14.x]
+        filename: link-check-result.txt
+
     steps:
       - uses: actions/checkout@v2
 
       # Gitの初期設定
-      - name: git setting
+      - name: Git setting
         run: |
           git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
           git config --local user.name ${{ github.repository_owner }}
+          git checkout feature/execLinkCheck
       
       # Node.js セットアップ
       # LTSの最新は14系なのでとりあえずそれで指定
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: ${{ matrix.node-version }}
 
       # 必要なパッケージのインストール
       - name: Install package
@@ -42,7 +48,7 @@ jobs:
       # GitHubから失敗した旨のメールが送信されるので通知はそれでいいかな。
       - name: Exec link-check
         run: |
-          FILENAME=link-check-result.txt
+          FILENAME=${{ matrix.filename }}
           touch $FILENAME
           echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') >> $FILENAME
           echo "-----------------------" >> $FILENAME
@@ -57,7 +63,7 @@ jobs:
       # 結果はファイルで残しておく
       - name: Commit result
         run: |
-          git add link-check-result.txt
+          git add ${{ matrix.filename }}
           git commit -m "Update result"
           git push
       
@@ -65,7 +71,7 @@ jobs:
       - name: Check broken count
         id: BrokenCheck
         run: |
-          echo "::set-output name=count::$(cat link-check-result.txt | grep BROKEN | wc -l)"
+          echo "::set-output name=count::$(cat ${{ matrix.filename }} | grep BROKEN | wc -l)"
 
       # リンクチェックの結果次第でCIをエラーにする
       - name: Error Handling
