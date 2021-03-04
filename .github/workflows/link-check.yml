@@ -48,7 +48,7 @@ jobs:
         run: |
           FILENAME=${{ env.RESULT_FILE }}
           touch $FILENAME
-          echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') >> $FILENAME
+          echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') > $FILENAME
           echo "=========================" >> $FILENAME
           echo -e "\n" >> $FILENAME
           while read url
