@@ -54,8 +54,7 @@ jobs:
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
-            blc "$url"
-            # blc "$url" > tmp.txt
+            blc "$url" > tmp.txt
             # cat tmp.txt | grep BROKEN >> $FILENAME
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
