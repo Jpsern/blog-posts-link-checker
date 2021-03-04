@@ -43,7 +43,7 @@ jobs:
       # grepテスト
       - name: Test grep command
         run: |
-          echo 'aaaaaaa' | grep 'bbbbbbb'
+          echo 'aaaaaaa' | grep 'aaa'
 
       # リンクチェック実行
       # あとは出力結果を保存してコミットしてしまえばいいか。
