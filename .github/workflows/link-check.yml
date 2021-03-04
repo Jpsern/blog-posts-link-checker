@@ -54,9 +54,7 @@ jobs:
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
-            # blc "$url" | grep BROKEN >> $FILENAME
-            echo ├───OK─── https://jpsern.com >> $FILENAME # テスト用
-            echo "-----------------------" >> $FILENAME
+            blc "$url" | grep BROKEN >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
       
