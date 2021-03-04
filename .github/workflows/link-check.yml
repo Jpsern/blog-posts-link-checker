@@ -54,10 +54,12 @@ jobs:
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
-            blc "$url" | grep BROKEN >> $FILENAME
+            blc "$url" > tmp.txt
+            cat | grep BROKEN >> $FILENAME
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
+          rm tmp.txt
       
       # 結果はファイルで残しておく
       - name: Commit result
