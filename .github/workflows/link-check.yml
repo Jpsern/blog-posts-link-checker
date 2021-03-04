@@ -45,6 +45,8 @@ jobs:
       # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
       - name: Exec link-check
         run: |
+          set +e
+          status=0
           FILENAME=${{ env.RESULT_FILE }}
           touch $FILENAME
           echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') > $FILENAME
@@ -53,7 +55,10 @@ jobs:
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
-            blc "$url" > tmp.txt
+            blc "$url" > tmp.txt || {
+              status=$?
+              echo "Fail {$status}"
+            }
             if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
               cat tmp.txt | grep 'BROKEN' >> $FILENAME
             else
@@ -62,7 +67,9 @@ jobs:
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
-      
+          echo "status {$status}"
+          exit $status
+
       # 結果はファイルで残しておく
       - name: Commit result
         run: |
