@@ -40,11 +40,6 @@ jobs:
           blc --help
           blc --version
 
-      # grepテスト
-      - name: Test grep command
-        run: |
-          echo 'aaaaaaa' | grep -q 'bbbbbbb'
-
       # リンクチェック実行
       # あとは出力結果を保存してコミットしてしまえばいいか。
       # 最後にBROKENの数をファイルからカウントして1つ以上あればCIをコケさせれば
@@ -60,8 +55,9 @@ jobs:
           do
             echo Getting links from "$url" >> $FILENAME
             blc "$url" > tmp.txt
-            cat tmp.txt
-            # cat tmp.txt | grep BROKEN >> $FILENAME
+            if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
+              cat tmp.txt | grep 'BROKEN' >> $FILENAME
+            fi
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
