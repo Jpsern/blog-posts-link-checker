@@ -65,9 +65,9 @@ jobs:
       # 結果はファイルで残しておく
       - name: Commit result
         run: |
-          git add ${{ env.RESULT_FILE }}
-          git commit -m "Update result"
-          git push
+          # git add ${{ env.RESULT_FILE }}
+          # git commit -m "Update result"
+          # git push
       
       # エラーハンドリング用の結果を控えておく
       - name: Check broken count
