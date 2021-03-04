@@ -55,7 +55,7 @@ jobs:
           do
             echo Getting links from "$url" >> $FILENAME
             blc "$url" > tmp.txt
-            cat | grep BROKEN >> $FILENAME
+            cat tmp.txt | grep BROKEN >> $FILENAME
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
