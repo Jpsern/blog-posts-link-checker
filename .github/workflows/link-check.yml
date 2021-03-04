@@ -49,13 +49,15 @@ jobs:
           FILENAME=${{ env.RESULT_FILE }}
           touch $FILENAME
           echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') >> $FILENAME
-          echo "-----------------------" >> $FILENAME
+          echo "=========================" >> $FILENAME
+          echo -e "\n" >> $FILENAME
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
             # blc "$url" | grep BROKEN >> $FILENAME
-            echo -----BROKEN-----hogehoge >> $FILENAME # テスト用
+            echo ├───BROKEN─── https://jpsern.com >> $FILENAME # テスト用
             echo "-----------------------" >> $FILENAME
+            echo -e "\n" >> $FILENAME
           done < post-list.txt
       
       # 結果はファイルで残しておく
