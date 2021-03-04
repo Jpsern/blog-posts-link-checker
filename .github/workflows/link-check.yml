@@ -36,29 +36,39 @@ jobs:
           blc --help
           blc --version
 
-      # 結果用ファイル名の生成
-      - name: Generate result filename
-        id: filename
-        run: |
-          echo "::set-output name=result::result-$(date '+%Y_%m_%d_%H_%M_%S')"
-
-      # 出力テスト
-      - name: Print filename
-        run: |
-          echo ${{ steps.filename.outputs.result }}
-
       # リンクチェック実行
       # あとは出力結果を保存してコミットしてしまえばいいか。
       # 最後にBROKENの数をファイルからカウントして1つ以上あればCIをコケさせれば
       # GitHubから失敗した旨のメールが送信されるので通知はそれでいいかな。
       - name: Exec link-check
         run: |
-          FILENAME=${{ steps.filename.outputs.result }}.txt
+          FILENAME=link-check-result.txt
           touch $FILENAME
-          echo $FILENAME
-          # while read url
-          # do
-          #   echo Getting links from "$url" >> $FILENAME
-          #   blc "$url" | grep BROKEN >> $FILENAME
-          #   echo "-----------------------" >> $FILENAME
-          # done < post-list.txt
+          echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') >> $FILENAME
+          echo "-----------------------" >> $FILENAME
+          while read url
+          do
+            echo Getting links from "$url" >> $FILENAME
+            # blc "$url" | grep BROKEN >> $FILENAME
+            echo -----BROKEN-----hogehoge >> $FILENAME # テスト用
+            echo "-----------------------" >> $FILENAME
+          done < post-list.txt
+      
+      # 結果はファイルで残しておく
+      - name: Commit result
+        run: |
+          git add link-check-result.txt
+          git commit -m "Update result"
+          git push
+      
+      # エラーハンドリング用の結果を控えておく
+      - name: Check broken count
+        id: BrokenCheck
+        run: |
+          echo "::set-output name=count::$(cat link-check-result.txt | grep BROKEN | wc -l)"
+
+      # リンクチェックの結果次第でCIをエラーにする
+      - name: Error Handling
+        run: |
+          exit 1
+        if: steps.BrokenCheck.outputs.count > 0
