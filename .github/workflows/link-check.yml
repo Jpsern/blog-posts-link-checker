@@ -56,6 +56,8 @@ jobs:
             blc "$url" > tmp.txt
             if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
               cat tmp.txt | grep 'BROKEN' >> $FILENAME
+            else
+              echo ALL OK!! >> $FILENAME
             fi
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
