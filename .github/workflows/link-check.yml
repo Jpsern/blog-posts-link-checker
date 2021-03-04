@@ -50,14 +50,14 @@ jobs:
           touch $FILENAME
           echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') > $FILENAME
           echo "=========================" >> $FILENAME
-          echo -e "\n" >> $FILENAME
+          echo >> $FILENAME
           while read url
           do
             echo Getting links from "$url" >> $FILENAME
             # blc "$url" | grep BROKEN >> $FILENAME
             echo ├───BROKEN─── https://jpsern.com >> $FILENAME # テスト用
             echo "-----------------------" >> $FILENAME
-            echo -e "\n" >> $FILENAME
+            echo >> $FILENAME
           done < post-list.txt
       
       # 結果はファイルで残しておく
