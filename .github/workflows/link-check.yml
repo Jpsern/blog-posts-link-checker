@@ -41,9 +41,8 @@ jobs:
           blc --version
 
       # リンクチェック実行
-      # あとは出力結果を保存してコミットしてしまえばいいか。
-      # 最後にBROKENの数をファイルからカウントして1つ以上あればCIをコケさせれば
-      # GitHubから失敗した旨のメールが送信されるので通知はそれでいいかな。
+      # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
+      # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
       - name: Exec link-check
         run: |
           FILENAME=${{ env.RESULT_FILE }}
@@ -61,14 +60,13 @@ jobs:
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
-          # rm tmp.txt
       
       # 結果はファイルで残しておく
       - name: Commit result
         run: |
-          # git add ${{ env.RESULT_FILE }}
-          # git commit -m "Update result"
-          # git push
+          git add ${{ env.RESULT_FILE }}
+          git commit -m "Update result"
+          git push
       
       # エラーハンドリング用の結果を控えておく
       - name: Check broken count
