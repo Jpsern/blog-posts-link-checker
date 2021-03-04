@@ -60,7 +60,7 @@ jobs:
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
           done < post-list.txt
-          rm tmp.txt
+          # rm tmp.txt
       
       # 結果はファイルで残しておく
       - name: Commit result
