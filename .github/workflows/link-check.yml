@@ -54,16 +54,14 @@ jobs:
           echo >> $FILENAME
           while read url
           do
-            echo Getting links from "$url" >> $FILENAME
             blc "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
             }
             if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
+              echo Getting links from "$url" >> $FILENAME
               cat tmp.txt | grep 'BROKEN' >> $FILENAME
-            else
-              echo ALL OK!! >> $FILENAME
             fi
             echo "-----------------------" >> $FILENAME
             echo >> $FILENAME
