@@ -40,6 +40,12 @@ jobs:
           blc --help
           blc --version
 
+      # 実行テスト2
+      - name: Test simple blc
+        run: |
+          blc https://jpsern.com
+          blc https://jpsern.com/2012/10/05/fc2-2012-10-05/
+
       # リンクチェック実行
       # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
       # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
