@@ -1,4 +1,4 @@
-Checked_date 2021-03-05 15:16:41
+Checked_date 2021-03-05 16:16:29
 =========================
 
 Getting links from https://jpsern.com
@@ -10,10 +10,6 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2019/02/26/recent-learn-js/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2019/02/22/origin-of-jpsern/
 ALL OK!!
 -----------------------
 
@@ -30,23 +26,7 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2019/02/19/topics-create-thissite/
-├─BROKEN─ https://github.com/joyceim/hexo-theme-apollo/ (HTTP_404)
------------------------
-
-Getting links from https://jpsern.com/2014/07/21/fc2-2014-07-21/
 ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2015/01/02/fc2-2015-01-02/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2016/08/15/fc2-2016-08-15/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2019/02/03/first-post/
-├─BROKEN─ https://github.com/joyceim/hexo-theme-apollo/ (HTTP_404)
 -----------------------
 
 Getting links from https://jpsern.com/2019/05/08/footer-year-automation/
@@ -85,43 +65,15 @@ Getting links from https://jpsern.com/2020/02/24/migrated-fc2-blog/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2019/02/12/old-site-archive/
-ALL OK!!
------------------------
-
 Getting links from https://jpsern.com/2019/10/04/music-game-status/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2013/02/04/fc2-2013-02-04/
-├─BROKEN─ http://headlines.yahoo.co.jp/hl?a=20130202-35027715-cnetj-sci (HTTP_404)
------------------------
-
-Getting links from https://jpsern.com/2013/02/13/fc2-2013-02-13/
+Getting links from https://jpsern.com/2019/02/12/old-site-archive/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2013/03/10/fc2-2013-03-10/
-├─BROKEN─ http://help.yahoo.co.jp/help/jp/geo/editors/editors-26.html (ERRNO_ENOTFOUND)
------------------------
-
-Getting links from https://jpsern.com/2013/03/13/fc2-2013-03-13/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2013/03/16/fc2-2013-03-16/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2013/03/20/fc2-2013-03-20/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2013/04/06/fc2-2013-04-06/
-├─BROKEN─ http://axn.co.jp/program/csiseries/midokoro_01_001.html (HTTP_404)
------------------------
-
-Getting links from https://jpsern.com/2013/06/21/fc2-2013-06-21/
+Getting links from https://jpsern.com/2019/02/22/origin-of-jpsern/
 ALL OK!!
 -----------------------
 
@@ -130,7 +82,7 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2013/09/24/fc2-2013-09-24/
-├─BROKEN─ http://blog.jp.twitter.com/2013/02/join-conversation.html (ERRNO_ENOTFOUND)
+ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2013/10/27/fc2-2013-10-27/
@@ -142,7 +94,6 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2013/12/02/fc2-2013-12-02/
-├─BROKEN─ http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml (HTTP_404)
 ├─BROKEN─ http://www.easy4apps.com/ (HTTP_404)
 -----------------------
 
@@ -163,30 +114,74 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2014/05/12/fc2-2014-05-12/
-├─BROKEN─ http://blog.yubais.net/4.html (ERRNO_ENOTFOUND)
------------------------
-
-Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2012/09/27/fc2-2012-09-27/
+Getting links from https://jpsern.com/2014/07/21/fc2-2014-07-21/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2012/10/01/fc2-2012-10-01/
+Getting links from https://jpsern.com/2015/01/02/fc2-2015-01-02/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2012/10/05/fc2-2012-10-05/
-├─BROKEN─ http://www.ganganonline.com/comic/kitakita/viewer/049/_SWF_Window.html (HTTP_404)
+Getting links from https://jpsern.com/2016/08/15/fc2-2016-08-15/
+ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2012/10/18/fc2-2012-10-18/
-├─BROKEN─ http://help.yahoo.co.jp/geo/create/create-01.html (ERRNO_ENOTFOUND)
+Getting links from https://jpsern.com/2019/02/03/first-post/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/01/18/fc2-2013-01-18/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/02/04/fc2-2013-02-04/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/02/13/fc2-2013-02-13/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/10/fc2-2013-03-10/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/13/fc2-2013-03-13/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/16/fc2-2013-03-16/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/20/fc2-2013-03-20/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/04/06/fc2-2013-04-06/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/06/21/fc2-2013-06-21/
+ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2012/10/22/fc2-2012-10-22/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/18/fc2-2012-10-18/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/27/fc2-2012-10-27/
 ALL OK!!
 -----------------------
 
@@ -195,10 +190,6 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2012/11/10/fc2-2012-11-10/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2012/10/27/fc2-2012-10-27/
 ALL OK!!
 -----------------------
 
@@ -218,12 +209,44 @@ Getting links from https://jpsern.com/2013/01/08/fc2-2013-01-08/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
+Getting links from https://jpsern.com/2011/01/09/fc2-2011-01-09/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2013/01/18/fc2-2013-01-18/
+Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
 ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2011/03/22/fc2-2011-03-22/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2011/07/12/fc2-2011-07-12/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2011/01/10/fc2-2011-1-10/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/01/04/fc2-2012-01-04/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/09/27/fc2-2012-09-27/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/01/fc2-2012-10-01/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/05/fc2-2012-10-05/
+├─BROKEN─ http://www.ganganonline.com/comic/kitakita/viewer/049/_SWF_Window.html (HTTP_404)
 -----------------------
 
 Getting links from https://jpsern.com/2010/04/07/fc2-2010-04-07/
@@ -266,31 +289,75 @@ Getting links from https://jpsern.com/2010/11/01/fc2-2010-11-01/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2011/01/09/fc2-2011-01-09/
-ALL OK!!
------------------------
-
 Getting links from https://jpsern.com/2010/11/28/fc2-2010-11-28/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
+Getting links from https://jpsern.com/2010/01/01/fc2-2010-01-01/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2011/03/22/fc2-2011-03-22/
+Getting links from https://jpsern.com/2010/01/13/fc2-2010-01-13/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2011/07/12/fc2-2011-07-12/
+Getting links from https://jpsern.com/2010/01/25/fc2-2010-01-25/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2011/01/10/fc2-2011-1-10/
+Getting links from https://jpsern.com/2010/01/31/fc2-2010-01-31/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2012/01/04/fc2-2012-01-04/
+Getting links from https://jpsern.com/2010/02/01/fc2-2010-02-01/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/02/fc2-2010-02-02/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/03/fc2-2010-02-03/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/15/fc2-2010-02-15/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/22/fc2-2010-02-22/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/03/01/fc2-2010-03-01/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2010/03/15/fc2-2010-03-15/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/08/02/fc2-2009-08-02/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/08/10/fc2-2009-08-10/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/08/16/fc2-2009-08-16/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/09/10/fc2-2009-09-10/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/09/22/fc2-2009-09-22/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2009/10/05/fc2-2009-10-05/
 ALL OK!!
 -----------------------
 
@@ -318,47 +385,11 @@ Getting links from https://jpsern.com/2009/11/24/fc2-2009-11-24/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2010/01/01/fc2-2010-01-01/
+Getting links from https://jpsern.com/2009/03/09/fc2-2009-03-09/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2010/01/13/fc2-2010-01-13/
-├─BROKEN─ http://news.www.infoseek.co.jp/topics/business/n_best_denki__20100112_3/story/12kyodo2010011201000771/ (ERRNO_ENOTFOUND)
------------------------
-
-Getting links from https://jpsern.com/2010/01/31/fc2-2010-01-31/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/02/01/fc2-2010-02-01/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/01/25/fc2-2010-01-25/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/02/02/fc2-2010-02-02/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/02/03/fc2-2010-02-03/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/02/15/fc2-2010-02-15/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/02/22/fc2-2010-02-22/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/03/01/fc2-2010-03-01/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2010/03/15/fc2-2010-03-15/
+Getting links from https://jpsern.com/2009/03/23/fc2-2009-03-23/
 ALL OK!!
 -----------------------
 
@@ -402,46 +433,6 @@ Getting links from https://jpsern.com/2009/07/24/fc2-2009-07-24/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2009/08/02/fc2-2009-08-02/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/08/10/fc2-2009-08-10/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/08/16/fc2-2009-08-16/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/09/10/fc2-2009-09-10/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/09/22/fc2-2009-09-22/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/10/05/fc2-2009-10-05/
-├─BROKEN─ https://jpsern.com/2009/03/09/fc2-2009-03-09/ (HTTP_404)
------------------------
-
-Getting links from https://jpsern.com/2008/11/02/fc2-2008-11-02/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2008/11/03/fc2-2008-11-03/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2008/12/14/fc2-2008-12-14/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2008/11/24/fc2-2008-11-24/
-ALL OK!!
------------------------
-
 Getting links from https://jpsern.com/2008/12/15/fc2-2008-12-15/
 ALL OK!!
 -----------------------
@@ -478,30 +469,6 @@ Getting links from https://jpsern.com/2009/03/08/fc2-2009-03-08/
 ALL OK!!
 -----------------------
 
-Getting links from https://jpsern.com/2009/03/05/fc2-2009-03-09/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2009/03/23/fc2-2009-03-23/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2019/04/04/2019-spring-anime-watch-schedule/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2019/05/07/about-long-gw/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2019/03/27/about-post-qiita/
-ALL OK!!
------------------------
-
-Getting links from https://jpsern.com/2020/11/18/about-static-site-generator/
-ALL OK!!
------------------------
-
 Getting links from https://jpsern.com/2019/05/22/added-disqus/
 ALL OK!!
 -----------------------
@@ -531,6 +498,38 @@ ALL OK!!
 -----------------------
 
 Getting links from https://jpsern.com/2008/10/28/fc2-2008-10-28/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2008/11/02/fc2-2008-11-02/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2008/11/03/fc2-2008-11-03/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2008/11/24/fc2-2008-11-24/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2008/12/14/fc2-2008-12-14/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2019/04/04/2019-spring-anime-watch-schedule/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2019/03/27/about-post-qiita/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2019/05/07/about-long-gw/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2020/11/18/about-static-site-generator/
 ALL OK!!
 -----------------------
 
