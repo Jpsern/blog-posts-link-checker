@@ -43,6 +43,7 @@ jobs:
       # 実行テスト2
       - name: Test simple blc
         run: |
+          set +e
           blc https://jpsern.com
           blc https://jpsern.com/2012/10/05/fc2-2012-10-05/
 
@@ -75,7 +76,7 @@ jobs:
             echo >> $FILENAME
           done < post-list.txt
           echo "status {$status}"
-          exit $status
+          # exit $status
 
       # 結果はファイルで残しておく
       - name: Commit result
