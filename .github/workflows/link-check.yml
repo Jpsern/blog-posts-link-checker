@@ -58,6 +58,7 @@ jobs:
             blc "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
+              echo "Target {$url}"
             }
             if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
               cat tmp.txt | grep 'BROKEN' >> $FILENAME
