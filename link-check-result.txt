@@ -1,0 +1,48 @@
+Checked_date 2021-03-05 14:59:06
+=========================
+
+Getting links from https://jpsern.com
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2019/02/19/topics-create-thissite/
+├─BROKEN─ https://github.com/joyceim/hexo-theme-apollo/ (HTTP_404)
+-----------------------
+
+Getting links from https://jpsern.com/2019/02/03/first-post/
+├─BROKEN─ https://github.com/joyceim/hexo-theme-apollo/ (HTTP_404)
+-----------------------
+
+Getting links from https://jpsern.com/2013/02/04/fc2-2013-02-04/
+ALL OK!!
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/10/fc2-2013-03-10/
+├─BROKEN─ http://help.yahoo.co.jp/help/jp/geo/editors/editors-26.html (ERRNO_ENOTFOUND)
+-----------------------
+
+Getting links from https://jpsern.com/2013/04/06/fc2-2013-04-06/
+├─BROKEN─ http://axn.co.jp/program/csiseries/midokoro_01_001.html (HTTP_404)
+-----------------------
+
+Getting links from https://jpsern.com/2013/09/24/fc2-2013-09-24/
+├─BROKEN─ http://blog.jp.twitter.com/2013/02/join-conversation.html (ERRNO_ENOTFOUND)
+-----------------------
+
+Getting links from https://jpsern.com/2013/12/02/fc2-2013-12-02/
+├─BROKEN─ http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml (HTTP_404)
+├─BROKEN─ http://www.easy4apps.com/ (HTTP_404)
+-----------------------
+
+Getting links from https://jpsern.com/2014/05/12/fc2-2014-05-12/
+├─BROKEN─ http://blog.yubais.net/4.html (ERRNO_ENOTFOUND)
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/05/fc2-2012-10-05/
+├─BROKEN─ http://www.ganganonline.com/comic/kitakita/viewer/049/_SWF_Window.html (HTTP_404)
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/18/fc2-2012-10-18/
+├─BROKEN─ http://help.yahoo.co.jp/geo/create/create-01.html (ERRNO_ENOTFOUND)
+-----------------------
+

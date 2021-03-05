@@ -1,0 +1,94 @@
+# リンクチェックを実行するCI
+name: Link check CI
+
+on:
+  schedule:
+    - cron: "10 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      RESULT_FILE: link-check-result.txt
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Gitの初期設定
+      - name: Git setting
+        run: |
+          git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
+          git config --local user.name ${{ github.repository_owner }}
+          git fetch origin
+          git checkout master
+      
+      # Node.js セットアップ
+      # LTSの最新は14系なのでとりあえずそれで指定
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      # 必要なパッケージのインストール
+      - name: Install package
+        run: npm install broken-link-checker -g
+
+      # 実行テスト
+      # バージョンが変わったときのためにこの出力は残しておくか
+      - name: Print help and version
+        run: |
+          blc --version
+
+      # リンクチェック実行
+      # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
+      # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
+      - name: Exec link-check
+        run: |
+          set +e
+          status=0
+          FILENAME=${{ env.RESULT_FILE }}
+          touch $FILENAME
+          echo Checked_date $(date '+%Y-%m-%d %H:%M:%S') > $FILENAME
+          echo "=========================" >> $FILENAME
+          echo >> $FILENAME
+          while read url
+          do
+            echo Getting links from "$url" >> $FILENAME
+            blc "$url" > tmp.txt || {
+              status=$?
+              echo "Fail {$status}"
+              echo "Target {$url}"
+            }
+            if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
+              cat tmp.txt | grep 'BROKEN' >> $FILENAME
+            else
+              echo ALL OK!! >> $FILENAME
+            fi
+            echo "-----------------------" >> $FILENAME
+            echo >> $FILENAME
+          done < post-list.txt
+          echo "status {$status}"
+          # exit $status
+
+      # 結果はActions上だと見にくかったのでファイルで残しておく
+      # 最新の結果さえあれば良いので同じファイルを更新していく
+      # historyはGithubで確認できるので十分
+      - name: Commit result
+        run: |
+          git add ${{ env.RESULT_FILE }}
+          git commit -m "Update result"
+          git push
+      
+      # エラーハンドリング用の結果を控えておく
+      - name: Check broken count
+        id: BrokenCheck
+        run: |
+          echo "::set-output name=count::$(cat ${{ env.RESULT_FILE }} | grep BROKEN | wc -l)"
+
+      # リンクチェックの結果次第でCIをエラーにする
+      # TODO: Issue立てたりできたほうがいいかな・・・まあそのうち
+      - name: Error Handling
+        run: |
+          exit 1
+        if: steps.BrokenCheck.outputs.count > 0
