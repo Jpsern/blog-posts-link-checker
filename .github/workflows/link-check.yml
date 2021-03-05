@@ -35,17 +35,10 @@ jobs:
         run: npm install broken-link-checker -g
 
       # 実行テスト
+      # バージョンが変わったときのためにこの出力は残しておくか
       - name: Print help and version
         run: |
-          blc --help
           blc --version
-
-      # 実行テスト2
-      - name: Test simple blc
-        run: |
-          # set +e
-          # blc https://jpsern.com
-          # blc https://jpsern.com/2012/10/05/fc2-2012-10-05/
 
       # リンクチェック実行
       # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
@@ -78,7 +71,9 @@ jobs:
           echo "status {$status}"
           # exit $status
 
-      # 結果はファイルで残しておく
+      # 結果はActions上だと見にくかったのでファイルで残しておく
+      # 最新の結果さえあれば良いので同じファイルを更新していく
+      # historyはGithubで確認できるので十分
       - name: Commit result
         run: |
           git add ${{ env.RESULT_FILE }}
@@ -92,6 +87,7 @@ jobs:
           echo "::set-output name=count::$(cat ${{ env.RESULT_FILE }} | grep BROKEN | wc -l)"
 
       # リンクチェックの結果次第でCIをエラーにする
+      # TODO: Issue立てたりできたほうがいいかな・・・まあそのうち
       - name: Error Handling
         run: |
           exit 1
