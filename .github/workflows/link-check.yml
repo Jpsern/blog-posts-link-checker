@@ -77,7 +77,7 @@ jobs:
       - name: Commit result
         run: |
           git add ${{ env.RESULT_FILE }}
-          git commit -m "Update result"
+          git commit -m "Update ${{ env.RESULT_FILE }}"
           git push
       
       # エラーハンドリング用の結果を控えておく
