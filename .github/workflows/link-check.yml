@@ -44,6 +44,7 @@ jobs:
       # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
       # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
       - name: Exec link-check
+        id: linkCheck
         run: |
           set +e
           status=0
@@ -67,7 +68,7 @@ jobs:
             fi
           done < post-list.txt
           echo "status {$status}"
-          # exit $status
+          echo "::set-output name=status::$status"
 
       # 結果はActions上だと見にくかったのでファイルで残しておく
       # 最新の結果さえあれば良いので同じファイルを更新していく
@@ -77,16 +78,10 @@ jobs:
           git add ${{ env.RESULT_FILE }}
           git commit -m "Update ${{ env.RESULT_FILE }}"
           git push
-      
-      # エラーハンドリング用の結果を控えておく
-      - name: Check broken count
-        id: BrokenCheck
-        run: |
-          echo "::set-output name=count::$(cat ${{ env.RESULT_FILE }} | grep BROKEN | wc -l)"
 
       # リンクチェックの結果次第でCIをエラーにする
       # TODO: Issue立てたりできたほうがいいかな・・・まあそのうち
       - name: Error Handling
         run: |
           exit 1
-        if: steps.BrokenCheck.outputs.count > 0
+        if: steps.linkCheck.outputs.status != 0
