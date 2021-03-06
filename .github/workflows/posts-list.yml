@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FILENAME: post-list.txt
 
     steps:
       - uses: actions/checkout@v2
@@ -24,13 +26,13 @@ jobs:
       # サイトマップからURLリスト作成
       - name: Create URL list
         run: |
-          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > post-list.txt
+          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > ${{ env.FILENAME }}
 
       # 差分の有無を確認する
       - name: Check diffs
         id: diffs
         run: |
-          git add -N post-list.txt
+          git add -N ${{ env.FILENAME }}
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       # カウント出力テスト
@@ -41,7 +43,7 @@ jobs:
       # 差分カウントが0以上ならコミットしてプッシュする
       - name: Commit file and push
         run: |
-          git add post-list.txt
-          git commit -m 'Update posts-list.txt'
+          git add ${{ env.FILENAME }}
+          git commit -m 'Update ${{ env.FILENAME }}'
           git push
         if: steps.diffs.outputs.count > 0
