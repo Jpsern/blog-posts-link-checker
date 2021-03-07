@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/Jpsern/blog-posts-link-checker.git"
   },
-  "author": "",
+  "author": "Jpsern",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jpsern/blog-posts-link-checker/issues"
   },
-  "homepage": "https://github.com/Jpsern/blog-posts-link-checker#readme"
+  "homepage": "https://github.com/Jpsern/blog-posts-link-checker#readme",
+  "dependencies": {
+    "broken-link-checker": "^0.7.8"
+  }
 }
