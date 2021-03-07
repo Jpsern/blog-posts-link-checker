@@ -32,13 +32,13 @@ jobs:
 
       # 必要なパッケージのインストール
       - name: Install package
-        run: npm install broken-link-checker -g
+        run: npm install
 
       # 実行テスト
       # バージョンが変わったときのためにこの出力は残しておくか
       - name: Print version
         run: |
-          blc --version
+          npx blc --version
 
       # リンクチェック実行
       # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
@@ -55,7 +55,7 @@ jobs:
           echo >> $FILENAME
           while read url
           do
-            blc "$url" > tmp.txt || {
+            npx blc "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
