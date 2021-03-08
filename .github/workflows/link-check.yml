@@ -50,7 +50,7 @@ jobs:
           status=0
           FILENAME=${{ env.RESULT_FILE }}
           touch $FILENAME
-          echo Checked_date $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S')(UTC+0900) > $FILENAME
+          echo Checked_date $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S')'(UTC+0900)' > $FILENAME
           echo "=========================" >> $FILENAME
           echo >> $FILENAME
           while read url
