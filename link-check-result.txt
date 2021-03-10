@@ -1,3 +1,7 @@
-Checked_date 2021-03-09 10:07:56(UTC+0900)
+Checked_date 2021-03-10 10:08:14(UTC+0900)
 =========================
+
+Getting links from https://jpsern.com/2010/04/07/fc2-2010-04-07/
+├─BROKEN─ https://web.archive.org/web/20100412085913/http:/www.pref.kanagawa.jp/osirase/kenkou/tobacco/tobacco_jorei.html (ERRNO_ECONNRESET)
+-----------------------
 
