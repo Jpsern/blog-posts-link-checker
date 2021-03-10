@@ -7,3 +7,6 @@ A tool that regularly checks for broken links on my blog. Checking work is done 
 
 ## URI
 https://jpsern.com
+
+## LICENSE
+https://github.com/Jpsern/blog-posts-link-checker/blob/master/LICENSE
