@@ -34,7 +34,7 @@ jobs:
 
       # 必要なパッケージのインストール
       - name: Install package
-        run: npm install
+        run: npm ci
 
       # 実行テスト
       # バージョンが変わったときのためにこの出力は残しておくか
