@@ -22,6 +22,8 @@ jobs:
           git config --local user.name ${{ github.repository_owner }}
           git fetch origin
           git checkout master
+          # Re-run 時に link-check-result.txt の更新を落としてこないとpushがコケるのでpullしておく
+          git pull
       
       # Node.js セットアップ
       # LTSの最新は14系なのでとりあえずそれで指定
