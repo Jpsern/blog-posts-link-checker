@@ -1,3 +1,8 @@
-Checked_date 2021-03-12 10:09:22(UTC+0900)
+Checked_date 2021-03-13 10:08:11(+0900)
 =========================
+
+Getting links from https://jpsern.com/2019/10/04/music-game-status/
+├─BROKEN─ http://gsv.fun/ja/matixx/177/d (HTTP_503)
+├─BROKEN─ http://gsv.fun/ja/exchain/179/d (HTTP_503)
+-----------------------
 
