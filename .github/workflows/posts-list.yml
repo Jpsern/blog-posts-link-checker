@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILENAME: post-list.txt
-
+      REPOSITORY_OWNER: ${{ github.repository_owner }}
+      REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
     steps:
       - uses: actions/checkout@v2
 
