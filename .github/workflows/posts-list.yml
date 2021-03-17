@@ -18,7 +18,7 @@ jobs:
       # Gitの初期設定
       - name: Git setting
         run: |
-          sh ./git_settings.sh
+          sh ./scripts/git_settings.sh
 
       # サイトマップからURLリスト作成
       - name: Create URL list
