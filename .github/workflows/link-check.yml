@@ -17,13 +17,10 @@ jobs:
 
       # Gitの初期設定
       - name: Git setting
-        run: |
-          git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
-          git config --local user.name ${{ github.repository_owner }}
-          git fetch origin
-          git checkout master
-          # Re-run 時に link-check-result.txt の更新を落としてこないとpushがコケるのでpullしておく
-          git pull
+        run: sh ./scripts/git_settings.sh
+        env:
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
       
       # Node.js セットアップ
       # LTSの最新は14系なのでとりあえずそれで指定
