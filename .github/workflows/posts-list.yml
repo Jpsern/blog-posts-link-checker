@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILENAME: post-list.txt
-      REPOSITORY_OWNER: ${{ github.repository_owner }}
-      REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
+
     steps:
       - uses: actions/checkout@v2
 
       # Gitの初期設定
       - name: Git setting
-        run: |
-          sh ./scripts/git_settings.sh
+        run: sh ./scripts/git_settings.sh
+        env:
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
 
       # サイトマップからURLリスト作成
       - name: Create URL list
