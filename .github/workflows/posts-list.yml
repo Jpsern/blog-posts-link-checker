@@ -17,11 +17,8 @@ jobs:
 
       # Gitの初期設定
       - name: Git setting
-        run: |        
-          git config --local user.email ${{ secrets.REPOSITORY_OWNER_EMAIL }}
-          git config --local user.name ${{ github.repository_owner }}
-          git checkout master
-          git branch
+        run: |
+          sh ./git_settings.sh
 
       # サイトマップからURLリスト作成
       - name: Create URL list
