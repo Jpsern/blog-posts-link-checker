@@ -1,3 +1,4 @@
+const { Octokit } = require("@octokit/action");
 const octokit = new Octokit();
 const owner = "Jpsern";
 const repo = "test-product";
