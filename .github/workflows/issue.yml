@@ -1,0 +1,26 @@
+# リンクチェックを実行するCI
+name: Link check CI
+
+on:
+  push: 
+    branches:
+      - feature/createIssue
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create Issue
+        run: node .github/scripts/create-issue.js
+        env: ${{ secrets.GITHUB_TOKEN }}
