@@ -1,5 +1,4 @@
-# リンクチェックを実行するCI
-name: Link check CI
+name: Create Issue CI
 
 on:
   push: 
