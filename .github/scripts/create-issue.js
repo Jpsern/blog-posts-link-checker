@@ -3,7 +3,7 @@ const octokit = new Octokit();
 const owner = "Jpsern";
 const repo = "test-product";
 
-async () => {
+(async () => {
   console.log("execute async...");
   const { data } = await octokit.request("POST /repos/{owner}/{repo}/issues", {
     owner,
@@ -11,4 +11,4 @@ async () => {
     title: "My test issue",
   });
   console.log("Issue created: %s", data.html_url);
-}
+})();
