@@ -4,6 +4,7 @@ const owner = "Jpsern";
 const repo = "test-product";
 
 async () => {
+  console.log("execute async...");
   const { data } = await octokit.request("POST /repos/{owner}/{repo}/issues", {
     owner,
     repo,
