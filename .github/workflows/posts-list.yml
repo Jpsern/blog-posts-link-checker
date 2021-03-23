@@ -43,6 +43,6 @@ jobs:
       - name: Commit file and push
         run: |
           git add $FILENAME
-          git commit -m 'Update $FILENAME'
+          git commit -m "Update $FILENAME"
           git push
         if: steps.diffs.outputs.count > 0
