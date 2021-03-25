@@ -9,7 +9,7 @@ const repo = "test-product";
   const { data } = await octokit.request("POST /repos/{owner}/{repo}/issues", {
     owner,
     repo,
-    title: "Found broken link -" + process.env.CURRENT_DATE,
+    title: `Found broken link(${process.env.CURRENT_DATE})`,
     body: "https://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.txt",
     labels: ['bug']
   });
