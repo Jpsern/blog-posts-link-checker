@@ -1,9 +1,8 @@
+# Issue発行のテストに使用していたCI
+# テストは終わったのでpushトリガーは削除しています
 name: Create Issue CI
 
 on:
-  push: 
-    branches:
-      - feature/createIssue
   workflow_dispatch:
 
 jobs:
