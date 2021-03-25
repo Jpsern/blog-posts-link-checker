@@ -17,7 +17,7 @@ jobs:
 
       # Gitの初期設定
       - name: Git setting
-        run: sh ./scripts/git_settings.sh
+        run: sh .github/scripts/git_settings.sh
         env:
           REPOSITORY_OWNER: ${{ github.repository_owner }}
           REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
@@ -30,7 +30,7 @@ jobs:
           node-version: '14.x'
 
       # 必要なパッケージのインストール
-      - name: Install package
+      - name: Install dependencies
         run: npm ci
 
       # 実行テスト
@@ -38,6 +38,10 @@ jobs:
       - name: Print version
         run: |
           npx blc --version
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')"
 
       # リンクチェック実行
       # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
@@ -48,7 +52,7 @@ jobs:
           set +e
           status=0
           touch $RESULT_FILE
-          echo Checked_date $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)') > $RESULT_FILE
+          echo Checked_date ${{ steps.date.outputs.date }} > $RESULT_FILE
           echo "=========================" >> $RESULT_FILE
           echo >> $RESULT_FILE
           while read url
@@ -77,9 +81,14 @@ jobs:
           git commit -m "Update $RESULT_FILE"
           git push
 
-      # リンクチェックの結果次第でCIをエラーにする
-      # TODO: Issue立てたりできたほうがいいかな・・・まあそのうち
-      - name: Error Handling
+      # リンクチェックの結果次第でIssueを発行する
+      # メール通知してくれるので exit 1 も残しています。
+      - name: Create Issue
         run: |
+          node .github/scripts/create-issue.js
           exit 1
+        env:
+          GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
+          TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
+          CURRENT_DATE: ${{ steps.date.outputs.date }}
         if: steps.linkCheck.outputs.status != 0
