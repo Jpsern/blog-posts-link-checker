@@ -24,3 +24,4 @@ jobs:
         run: node .github/scripts/create-issue.js
         env: 
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
+          TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
