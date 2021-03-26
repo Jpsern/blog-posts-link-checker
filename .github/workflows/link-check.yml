@@ -39,6 +39,8 @@ jobs:
         run: |
           npx blc --version
 
+      # 結果ファイルやIssueに使う日付文字列の作成
+      # https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')"
