@@ -1,20 +1,3 @@
-Checked_date 2021-03-31 09:54:22(+0900)
+Checked_date 2021-03-31 17:03:10(+0900)
 =========================
-
-Getting links from https://jpsern.com
-├─BROKEN─ https://jpsern.com/images/dokan.svg (HTTP_503)
-├─BROKEN─ https://jpsern.com/about (HTTP_503)
------------------------
-
-Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
-├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_503)
------------------------
-
-Getting links from https://jpsern.com/2013/01/18/fc2-2013-01-18/
-├─BROKEN─ https://jpsern.com/music (HTTP_503)
------------------------
-
-Getting links from https://jpsern.com/2008/10/24/fc2-2008-10-24/
-├─BROKEN─ https://jpsern.com/archives (HTTP_503)
------------------------
 
