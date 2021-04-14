@@ -11,5 +11,4 @@ const repo = process.env.TARGET_REPO;
     body: "# Details\nPlease refer to the link below.\nhttps://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.txt",
     labels: ['bug']
   });
-  console.log("Issue created: %s", data.html_url);
 })();
