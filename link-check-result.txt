@@ -1,3 +1,7 @@
-Checked_date 2021-04-13 10:02:46(+0900)
+Checked_date 2021-04-14 09:57:42(+0900)
 =========================
+
+Getting links from https://jpsern.com/2019/04/04/2019-spring-anime-watch-schedule/
+├─BROKEN─ https://www.hakusensha.co.jp/comicslist/46910/ (HTTP_503)
+-----------------------
 
