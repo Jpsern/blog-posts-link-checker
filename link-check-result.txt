@@ -1,3 +1,7 @@
-Checked_date 2021-04-15 16:12:23(+0900)
+Checked_date 2021-04-16 09:59:00(+0900)
 =========================
+
+Getting links from https://jpsern.com/2013/02/13/fc2-2013-02-13/
+├─BROKEN─ http://kolber.github.com/audiojs/ (HTTP_404)
+-----------------------
 
