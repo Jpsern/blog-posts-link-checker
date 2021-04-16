@@ -7,7 +7,7 @@ const repo = process.env.TARGET_REPO;
   const { data } = await octokit.request("POST /repos/{owner}/{repo}/issues", {
     owner,
     repo,
-    title: `Fix broken links. (${process.env.CURRENT_DATE})`,
+    title: `Found broken links. (${process.env.CURRENT_DATE})`,
     body: "# Details\nPlease refer to the link below.\nhttps://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.txt",
     labels: ['bug']
   });
