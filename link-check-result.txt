@@ -1,11 +1,11 @@
-Checked_date 2021-05-08 09:50:49(+0900)
+Checked_date 2021-05-09 09:54:31(+0900)
 =========================
 
-Getting links from https://jpsern.com/2010/04/07/fc2-2010-04-07/
-├─BROKEN─ https://web.archive.org/web/20100412085913/http:/www.pref.kanagawa.jp/osirase/kenkou/tobacco/tobacco_jorei.html (HTTP_500)
+Getting links from https://jpsern.com/2013/12/21/fc2-2013-12-21/
+├─BROKEN─ https://jpsern.com/images/dokan.svg (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2010/01/13/fc2-2010-01-13/
-├─BROKEN─ https://web.archive.org/web/20100115054659/http:/news.www.infoseek.co.jp/topics/business/n_best_denki__20100112_3/story/12kyodo2010011201000771/ (HTTP_500)
+Getting links from https://jpsern.com/2009/02/22/fc2-2009-02-22/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
 -----------------------
 
