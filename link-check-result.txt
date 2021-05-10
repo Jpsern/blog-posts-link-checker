@@ -1,11 +1,7 @@
-Checked_date 2021-05-09 09:54:31(+0900)
+Checked_date 2021-05-10 09:53:45(+0900)
 =========================
 
-Getting links from https://jpsern.com/2013/12/21/fc2-2013-12-21/
+Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
 ├─BROKEN─ https://jpsern.com/images/dokan.svg (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/02/22/fc2-2009-02-22/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
 -----------------------
 
