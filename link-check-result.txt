@@ -1,3 +1,28 @@
-Checked_date 2021-05-14 10:01:50(+0900)
+Checked_date 2021-05-15 09:59:28(+0900)
 =========================
+
+Getting links from https://jpsern.com/2020/02/24/migrated-fc2-blog/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2012/11/15/fc2-2012-11-15/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
+├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
+├─BROKEN─ https://jpsern.com/categories/%E9%A7%84%E6%96%87/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/10/04/fc2-2010-10-04/
+├─BROKEN─ https://jpsern.com/archives (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/22/fc2-2010-02-22/
+├─BROKEN─ https://jpsern.com/ (HTTP_400)
+├─BROKEN─ https://jpsern.com/ (HTTP_400)
+-----------------------
 
