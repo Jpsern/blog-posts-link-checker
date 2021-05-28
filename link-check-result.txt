@@ -1,3 +1,7 @@
-Checked_date 2021-05-27 10:24:24(+0900)
+Checked_date 2021-05-28 10:35:58(+0900)
 =========================
+
+Getting links from https://jpsern.com/2013/02/13/fc2-2013-02-13/
+├─BROKEN─ https://jpsern.com/archives (HTTP_400)
+-----------------------
 
