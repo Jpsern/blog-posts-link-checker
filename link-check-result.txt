@@ -1,3 +1,7 @@
-Checked_date 2021-06-05 10:25:22(+0900)
+Checked_date 2021-06-06 10:19:23(+0900)
 =========================
+
+Getting links from https://jpsern.com/2019/05/22/added-disqus/
+├─BROKEN─ https://jpsern.com/music (ERRNO_ECONNRESET)
+-----------------------
 
