@@ -1,7 +1,12 @@
-Checked_date 2021-06-06 10:19:23(+0900)
+Checked_date 2021-06-07 10:20:49(+0900)
 =========================
 
-Getting links from https://jpsern.com/2019/05/22/added-disqus/
-├─BROKEN─ https://jpsern.com/music (ERRNO_ECONNRESET)
+Getting links from https://jpsern.com/2013/03/20/fc2-2013-03-20/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/01/25/fc2-2010-01-25/
+├─BROKEN─ https://jpsern.com/2010/01/31/fc2-2010-01-31/ (HTTP_400)
 -----------------------
 
