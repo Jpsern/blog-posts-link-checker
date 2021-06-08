@@ -1,12 +1,23 @@
-Checked_date 2021-06-07 10:20:49(+0900)
+Checked_date 2021-06-08 10:19:29(+0900)
 =========================
 
-Getting links from https://jpsern.com/2013/03/20/fc2-2013-03-20/
+Getting links from https://jpsern.com/2020/01/07/happy-new-year-2020/
 ├─BROKEN─ https://jpsern.com/music (HTTP_400)
-├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2010/01/25/fc2-2010-01-25/
-├─BROKEN─ https://jpsern.com/2010/01/31/fc2-2010-01-31/ (HTTP_400)
+Getting links from https://jpsern.com/2020/02/24/migrated-fc2-blog/
+├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2013/10/27/fc2-2013-10-27/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/03/24/fc2-2009-03-24/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2008/12/15/fc2-2008-12-15/
+├─BROKEN─ https://jpsern.com/2008/12/24/fc2-2008-12-24/ (HTTP_400)
 -----------------------
 
