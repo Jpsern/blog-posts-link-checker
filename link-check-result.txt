@@ -1,7 +1,7 @@
-Checked_date 2021-06-09 09:58:02(+0900)
+Checked_date 2021-06-10 09:57:11(+0900)
 =========================
 
-Getting links from https://jpsern.com/2009/03/24/fc2-2009-03-24/
-├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_400)
+Getting links from https://jpsern.com/2010/11/28/fc2-2010-11-28/
+├─BROKEN─ https://jpsern.com/about (ERRNO_ECONNRESET)
 -----------------------
 
