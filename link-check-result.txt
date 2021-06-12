@@ -1,3 +1,19 @@
-Checked_date 2021-06-11 09:51:16(+0900)
+Checked_date 2021-06-12 09:46:36(+0900)
 =========================
+
+Getting links from https://jpsern.com/2010/07/26/fc2-2010-07-26/
+├─BROKEN─ https://hexo.io/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/03/01/fc2-2010-03-01/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/05/19/fc2-2009-05-19/
+├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2008/09/28/fc2-2008-09-28/
+├─BROKEN─ https://jpsern.com/2008/09/07/fc2-2008-09-07/ (HTTP_400)
+-----------------------
 
