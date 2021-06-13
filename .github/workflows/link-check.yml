@@ -87,7 +87,9 @@ jobs:
       # メール通知してくれるので exit 1 も残しています。
       - name: Create Issue
         run: |
-          node .github/scripts/create-issue.js
+          # リンクチェッカーがちょくちょくエラーを吐くので issue の作成は一旦止める
+          # 再実行で解消する場合が殆ど。
+          # node .github/scripts/create-issue.js
           exit 1
         env:
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
