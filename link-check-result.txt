@@ -1,3 +1,7 @@
-Checked_date 2021-06-13 09:53:53(+0900)
+Checked_date 2021-06-14 09:49:43(+0900)
 =========================
+
+Getting links from https://jpsern.com/2019/10/04/music-game-status/
+├─BROKEN─ https://p.eagate.573.jp/game/gfdm/20th/memory/2010_2012.html (HTTP_503)
+-----------------------
 
