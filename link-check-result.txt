@@ -1,4 +1,4 @@
-Checked_date 2021-06-14 09:49:43(+0900)
+Checked_date 2021-06-15 09:54:34(+0900)
 =========================
 
 Getting links from https://jpsern.com/2019/10/04/music-game-status/
