@@ -59,7 +59,7 @@ jobs:
           echo >> $RESULT_FILE
           while read url
           do
-            npx blc -g "$url" > tmp.txt || {
+            npx blc -g --filter-level 0 "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
