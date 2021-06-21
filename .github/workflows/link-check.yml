@@ -63,13 +63,15 @@ jobs:
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-            }
-            if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
               echo Getting links from "$url" >> $RESULT_FILE
               cat tmp.txt | grep 'BROKEN' >> $RESULT_FILE
               echo "-----------------------" >> $RESULT_FILE
               echo >> $RESULT_FILE
-            fi
+
+              # BROKEN がなくてもエラーになるケースが稀にある
+              # Actions上に表示してデバッグするためcatする
+              cat tmp.txt
+            }
           done < post-list.txt
           echo "status {$status}"
           echo "::set-output name=status::$status"
