@@ -1,3 +1,15 @@
-Checked_date 2021-06-21 07:08:16(+0900)
+Checked_date 2021-06-22 02:38:19(+0900)
 =========================
+
+Getting links from https://jpsern.com/2013/11/18/fc2-2013-11-18/
+├─BROKEN─ https://jpsern.com/2013/10/27/fc2-2013-10-27/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/11/01/fc2-2009-11-01/
+├─BROKEN─ https://jpsern.com/2009/11/13/fc2-2009-11-13/ (HTTP_400)
+-----------------------
 
