@@ -1,18 +1,3 @@
-Checked_date 2021-06-22 07:08:28(+0900)
+Checked_date 2021-06-23 07:08:55(+0900)
 =========================
-
-Getting links from https://jpsern.com/2021/04/27/recent-junk-mail/
-├─BROKEN─ https://jpsern.com/2021/05/24/frozen-shoulder/ (HTTP_503)
------------------------
-
-Getting links from https://jpsern.com/2021/04/10/skip-ci-netlify-build/
------------------------
-
-Getting links from https://jpsern.com/2021/05/24/frozen-shoulder/
-├─BROKEN─ https://hexo.io/ (HTTP_503)
-├─BROKEN─ https://jpsern.com/2021/06/02/normal-heat-of-ramen/ (HTTP_503)
------------------------
-
-Getting links from https://jpsern.com/2019/05/07/about-long-gw/
------------------------
 
