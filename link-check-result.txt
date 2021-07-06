@@ -1,54 +1,7 @@
-Checked_date 2021-07-06 07:08:04(+0900)
+Checked_date 2021-07-07 07:08:00(+0900)
 =========================
 
-Getting links from https://jpsern.com/2021/04/27/recent-junk-mail/
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2019/02/12/old-site-archive/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2013/12/15/fc2-2013-12-15/
-├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2013/03/16/fc2-2013-03-16/
-├─BROKEN─ https://jpsern.com/tags/CSS/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/06/21/fc2-2010-06-21/
-├─BROKEN─ https://jpsern.com/about (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2011/03/22/fc2-2011-03-22/
-├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/03/01/fc2-2010-03-01/
-├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/10/12/fc2-2009-10-12/
-├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/11/13/fc2-2009-11-13/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/12/07/fc2-2009-12-07/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
-├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/01/01/fc2-2010-01-01/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
+Getting links from https://jpsern.com/2020/07/26/short-dtm/
+├─BROKEN─ https://help.twitter.com/ja/using-twitter/media-studio (HTTP_503)
 -----------------------
 
