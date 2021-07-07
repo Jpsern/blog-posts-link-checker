@@ -1,7 +1,6 @@
-Checked_date 2021-07-07 07:08:00(+0900)
+Checked_date 2021-07-08 07:08:09(+0900)
 =========================
 
-Getting links from https://jpsern.com/2020/07/26/short-dtm/
-├─BROKEN─ https://help.twitter.com/ja/using-twitter/media-studio (HTTP_503)
+Getting links from https://jpsern.com/2014/05/12/fc2-2014-05-12/
 -----------------------
 
