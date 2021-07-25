@@ -1,17 +1,7 @@
-Checked_date 2021-07-25 07:07:56(+0900)
+Checked_date 2021-07-26 07:07:53(+0900)
 =========================
 
-Getting links from https://jpsern.com
-├─BROKEN─ https://jpsern.com/tags/Netlify/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/tags/Netlify/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/07/12/fc2-2010-07-12/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/02/15/fc2-2010-02-15/
-├─BROKEN─ https://jpsern.com/tags/Windows/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/2010/02/03/fc2-2010-02-03/ (HTTP_400)
+Getting links from https://jpsern.com/2010/01/31/fc2-2010-01-31/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
 -----------------------
 
