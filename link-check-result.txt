@@ -1,20 +1,3 @@
-Checked_date 2021-07-29 07:08:11(+0900)
+Checked_date 2021-07-29 17:37:11(+0900)
 =========================
-
-Getting links from https://jpsern.com/2012/12/30/fc2-2012-12-30/
-├─BROKEN─ https://jpsern.com/about (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
-├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2012/09/19/fc2-2012-09-19/
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2012/09/27/fc2-2012-09-27/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
------------------------
 
