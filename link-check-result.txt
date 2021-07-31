@@ -1,3 +1,6 @@
-Checked_date 2021-07-31 07:08:05(+0900)
+Checked_date 2021-08-01 07:08:03(+0900)
 =========================
+
+Getting links from https://jpsern.com/2021/02/14/lighthouse-score-attack/
+-----------------------
 
