@@ -1,31 +1,7 @@
-Checked_date 2021-08-14 07:08:31(+0900)
+Checked_date 2021-08-14 16:43:36(+0900)
 =========================
 
-Getting links from https://jpsern.com/2009/10/12/fc2-2009-10-12/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/01/30/fc2-2009-01-30/
-├─BROKEN─ https://jpsern.com/categories/%E3%81%B5%E3%81%A4%E3%81%86%E3%81%AE%E6%97%A5%E8%A8%98/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/03/08/fc2-2009-03-08/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/03/23/fc2-2009-03-23/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2008/09/07/fc2-2008-09-07/
-├─BROKEN─ https://hexo.io/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2008/10/08/fc2-2008-10-08/
-├─BROKEN─ https://jpsern.com/about (HTTP_400)
-├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2008/10/27/fc2-2008-10-27/
+Getting links from https://jpsern.com/2010/02/15/fc2-2010-02-15/
+├─BROKEN─ https://jpsern.com/archives (ERRNO_ECONNRESET)
 -----------------------
 
