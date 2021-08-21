@@ -1,3 +1,7 @@
-Checked_date 2021-08-21 07:08:23(+0900)
+Checked_date 2021-08-22 07:08:07(+0900)
 =========================
+
+Getting links from https://jpsern.com/2008/11/03/fc2-2008-11-03/
+├─BROKEN─ https://hexo.io/ (HTTP_400)
+-----------------------
 
