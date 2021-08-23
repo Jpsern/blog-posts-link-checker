@@ -1,6 +1,3 @@
-Checked_date 2021-08-23 07:08:22(+0900)
+Checked_date 2021-08-23 17:54:40(+0900)
 =========================
-
-Getting links from https://jpsern.com/2020/11/18/about-static-site-generator/
------------------------
 
