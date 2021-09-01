@@ -1,11 +1,28 @@
-Checked_date 2021-09-01 07:07:18(+0900)
+Checked_date 2021-09-02 07:08:50(+0900)
 =========================
 
-Getting links from https://jpsern.com/2020/04/18/tele-work/
-├─BROKEN─ https://jpsern.com/tags/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/ (HTTP_400)
+Getting links from https://jpsern.com/2020/02/24/migrated-fc2-blog/
+├─BROKEN─ https://jpsern.com/2020/01/07/happy-new-year-2020/ (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2010/11/01/fc2-2010-11-01/
+Getting links from https://jpsern.com/2019/02/19/topics-create-thissite/
 ├─BROKEN─ https://hexo.io/ (HTTP_400)
+├─BROKEN─ https://hexo.io/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2013/03/20/fc2-2013-03-20/
+├─BROKEN─ https://jpsern.com/categories/%E9%A7%84%E6%96%87/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2012/10/05/fc2-2012-10-05/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/10/04/fc2-2010-10-04/
+├─BROKEN─ https://hexo.io/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2008/09/07/fc2-2008-09-07/
+├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
 -----------------------
 
