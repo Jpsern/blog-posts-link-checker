@@ -1,33 +1,3 @@
-Checked_date 2021-09-02 22:36:30(+0900)
+Checked_date 2021-09-03 07:08:26(+0900)
 =========================
-
-Getting links from https://jpsern.com/2013/09/24/fc2-2013-09-24/
-├─BROKEN─ https://hexo.io/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2013/12/21/fc2-2013-12-21/
-Error: HTML could not be retrieved
------------------------
-
-Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
-├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2011/07/12/fc2-2011-07-12/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2010/03/15/fc2-2010-03-15/
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/10/05/fc2-2009-10-05/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/11/01/fc2-2009-11-01/
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/archives (HTTP_400)
------------------------
 
