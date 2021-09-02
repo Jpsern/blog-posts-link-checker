@@ -31,13 +31,13 @@ jobs:
 
       # 必要なパッケージのインストール
       - name: Install dependencies
-        run: npm install broken-link-checker -g
+        run: npm ci
 
       # 実行テスト
       # バージョンが変わったときのためにこの出力は残しておくか
       - name: Print version
         run: |
-          blc --version
+          npx blc --version
 
       # 結果ファイルやIssueに使う日付文字列の作成
       # https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
@@ -59,7 +59,7 @@ jobs:
           echo >> $RESULT_FILE
           while read url
           do
-            blc -g --filter-level 0 "$url" > tmp.txt || {
+            npx blc -g --filter-level 0 "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
