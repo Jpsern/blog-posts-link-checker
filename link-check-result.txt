@@ -1,3 +1,36 @@
-Checked_date 2021-09-15 07:08:20(+0900)
+Checked_date 2021-09-16 03:00:01(+0900)
 =========================
+
+Getting links from https://jpsern.com/2020/07/26/short-dtm/
+├─BROKEN─ https://jpsern.com/2020/11/18/about-static-site-generator/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2013/02/04/fc2-2013-02-04/
+├─BROKEN─ https://jpsern.com/ (HTTP_400)
+├─BROKEN─ https://jpsern.com/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2013/09/08/fc2-2013-09-08/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/11/28/fc2-2010-11-28/
+├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/02/22/fc2-2010-02-22/
+├─BROKEN─ https://jpsern.com/tags/%E6%97%85%E8%A1%8C/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/04/07/fc2-2010-04-07/
+├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/05/19/fc2-2009-05-19/
+├─BROKEN─ https://jpsern.com/archives (HTTP_400)
+-----------------------
 
