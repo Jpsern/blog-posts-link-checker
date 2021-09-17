@@ -1,15 +1,7 @@
-Checked_date 2021-09-17 07:08:39(+0900)
+Checked_date 2021-09-18 07:08:41(+0900)
 =========================
 
-Getting links from https://jpsern.com/2013/01/15/fc2-2013-01-15/
-├─BROKEN─ https://jpsern.com/2013/01/18/fc2-2013-01-18/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2012/10/22/fc2-2012-10-22/
-├─BROKEN─ http://9cguide.appspot.com/ (HTTP_404)
------------------------
-
-Getting links from https://jpsern.com/2009/08/10/fc2-2009-08-10/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
+Getting links from https://jpsern.com/2012/10/18/fc2-2012-10-18/
+├─BROKEN─ https://jpsern.com/tags/export-from-FC2/ (ERRNO_ECONNRESET)
 -----------------------
 
