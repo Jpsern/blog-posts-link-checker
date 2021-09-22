@@ -1,17 +1,7 @@
-Checked_date 2021-09-22 07:08:34(+0900)
+Checked_date 2021-09-23 07:08:42(+0900)
 =========================
 
-Getting links from https://jpsern.com/2019/10/04/music-game-status/
-├─BROKEN─ https://jpsern.com/music (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/06/04/fc2-2009-06-04/
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
-├─BROKEN─ https://jpsern.com/ (HTTP_400)
------------------------
-
-Getting links from https://jpsern.com/2009/01/16/fc2-2009-01-16/
-├─BROKEN─ https://jpsern.com/atom.xml (HTTP_400)
+Getting links from https://jpsern.com/2019/02/12/old-site-archive/
+├─BROKEN─ https://jpsern.com/music (ERRNO_ECONNRESET)
 -----------------------
 
