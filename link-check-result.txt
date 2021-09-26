@@ -1,26 +1,26 @@
-Checked_date 2021-09-26 07:08:19(+0900)
+Checked_date 2021-09-27 07:08:20(+0900)
 =========================
 
-Getting links from https://jpsern.com/2021/05/24/frozen-shoulder/
+Getting links from https://jpsern.com/2014/07/21/fc2-2014-07-21/
 ├─BROKEN─ https://jpsern.com/archives (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2019/02/26/recent-learn-js/
+Getting links from https://jpsern.com/2012/11/13/fc2-2012-11-13/
 Error: HTML could not be retrieved
 -----------------------
 
-Getting links from https://jpsern.com/2012/12/30/fc2-2012-12-30/
+Getting links from https://jpsern.com/2010/03/15/fc2-2010-03-15/
+├─BROKEN─ https://jpsern.com/categories/%E3%81%B5%E3%81%A4%E3%81%86%E3%81%AE%E6%97%A5%E8%A8%98/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2008/11/03/fc2-2008-11-03/
 ├─BROKEN─ https://jpsern.com/music (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2010/07/26/fc2-2010-07-26/
-├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
+Getting links from https://jpsern.com/2008/11/24/fc2-2008-11-24/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
 -----------------------
 
-Getting links from https://jpsern.com/2009/11/01/fc2-2009-11-01/
-Error: socket hang up
------------------------
-
-Getting links from https://jpsern.com/2008/10/28/fc2-2008-10-28/
+Getting links from https://jpsern.com/2008/12/30/fc2-2008-12-30/
 -----------------------
 
