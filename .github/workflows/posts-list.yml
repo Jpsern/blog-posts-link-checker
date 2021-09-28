@@ -3,7 +3,7 @@ name: Post list CI
 
 on:
   schedule:
-    - cron: "0 21 * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 jobs:
