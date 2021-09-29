@@ -1,3 +1,28 @@
-Checked_date 2021-09-28 22:46:04(+0900)
+Checked_date 2021-09-29 11:28:34(+0900)
 =========================
+
+Getting links from https://jpsern.com/2020/01/07/happy-new-year-2020/
+├─BROKEN─ https://jpsern.com/privacy (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2013/02/04/fc2-2013-02-04/
+├─BROKEN─ https://jpsern.com/music (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2011/01/24/fc2-2011-01-24/
+├─BROKEN─ https://jpsern.com/2011/01/10/fc2-2011-1-10/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2010/04/07/fc2-2010-04-07/
+├─BROKEN─ https://jpsern.com/2010/04/26/fc2-2010-04-26/ (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/10/12/fc2-2009-10-12/
+├─BROKEN─ https://jpsern.com/about (HTTP_400)
+├─BROKEN─ https://jpsern.com/archives (HTTP_400)
+-----------------------
+
+Getting links from https://jpsern.com/2009/11/01/fc2-2009-11-01/
+├─BROKEN─ https://jpsern.com/archives (HTTP_400)
+-----------------------
 
