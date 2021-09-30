@@ -1,7 +1,7 @@
-Checked_date 2021-09-30 16:56:59(+0900)
+Checked_date 2021-09-30 17:50:38(+0900)
 =========================
 
 Getting links from https://jpsern.com/2019/05/08/footer-year-automation/
-├─BROKEN─ http://e-words.jp/w/%E3%83%95%E3%83%83%E3%82%BF.html (BLC_UNKNOWN)
+├─BROKEN─ https://e-words.jp/w/%E3%83%95%E3%83%83%E3%82%BF.html (BLC_UNKNOWN)
 -----------------------
 
