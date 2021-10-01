@@ -1,4 +1,4 @@
-Checked_date 2021-09-30 17:50:38(+0900)
+Checked_date 2021-10-01 11:37:11(+0900)
 =========================
 
 Getting links from https://jpsern.com/2019/05/08/footer-year-automation/
