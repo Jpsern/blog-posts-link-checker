@@ -46,8 +46,6 @@ jobs:
         run: echo "::set-output name=date::$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')"
 
       # リンクチェック実行
-      # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
-      # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
       - name: Exec link-check
         id: linkCheck
         run: |
@@ -55,7 +53,7 @@ jobs:
           status=0
           touch $RESULT_FILE
           echo "---" > $RESULT_FILE
-          echo "Checked_date: ${{ steps.date.outputs.date }}" > $RESULT_FILE
+          echo "Checked date: ${{ steps.date.outputs.date }}" > $RESULT_FILE
           echo "---" >> $RESULT_FILE
           echo >> \# Link check result
           while read url
