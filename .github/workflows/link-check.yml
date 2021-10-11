@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      RESULT_FILE: link-check-result.txt
+      RESULT_FILE: link-check-result.md
 
     steps:
       - uses: actions/checkout@v2
@@ -54,8 +54,9 @@ jobs:
           set +e
           status=0
           touch $RESULT_FILE
-          echo "Checked_date ${{ steps.date.outputs.date }}" > $RESULT_FILE
-          echo "=========================" >> $RESULT_FILE
+          echo "---" > $RESULT_FILE
+          echo "Checked_date: ${{ steps.date.outputs.date }}" > $RESULT_FILE
+          echo "---" >> $RESULT_FILE
           echo >> $RESULT_FILE
           while read url
           do
