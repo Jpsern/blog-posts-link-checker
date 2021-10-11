@@ -58,13 +58,14 @@ jobs:
           echo "Checked_date: ${{ steps.date.outputs.date }}" > $RESULT_FILE
           echo "---" >> $RESULT_FILE
           echo >> $RESULT_FILE
+          echo >>
           while read url
           do
             npx blc -gi --requests 1 --user-agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1" --filter-level 0 "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-              echo Getting links from "$url" >> $RESULT_FILE
+              echo \## Getting links from "$url" >> $RESULT_FILE
               cat tmp.txt | grep 'BROKEN' >> $RESULT_FILE
               cat tmp.txt | grep 'ERROR' --ignore-case >> $RESULT_FILE
               echo "-----------------------" >> $RESULT_FILE
