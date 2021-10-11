@@ -67,7 +67,7 @@ jobs:
               echo "Target {$url}"
               echo \#\# Target url: "$url" >> $RESULT_FILE
               if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
-                echo \#\#\# Broken > $RESULT_FILE
+                echo \#\#\# Broken >> $RESULT_FILE
                 cat tmp.txt | grep 'BROKEN' | cut -c17- | sed "s/^/\* /g" >> $RESULT_FILE
               fi
               if [ "`cat tmp.txt | grep 'ERROR' --ignore-case`" ]; then
