@@ -81,7 +81,7 @@ jobs:
               cat tmp.txt
             }
           done < post-list.txt
-          if [ $status -e 0 ]; then
+          if [ $status -eq 0 ]; then
             echo "All external links operational" >> $RESULT_FILE
           fi
           echo "status {$status}"
