@@ -55,8 +55,8 @@ jobs:
           set +e
           status=0
           touch $RESULT_FILE
-          echo "---" > $RESULT_FILE
-          echo "Checked date: ${{ steps.date.outputs.date }}" > $RESULT_FILE
+          echo "---" >> $RESULT_FILE
+          echo "Checked date: ${{ steps.date.outputs.date }}" >> $RESULT_FILE
           echo "---" >> $RESULT_FILE
           echo >> \# Link check result
           while read url
