@@ -5,9 +5,6 @@ on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
-  push: 
-    branches: 
-      - feat/resut-convert2md
 
 jobs:
   build:
@@ -81,7 +78,6 @@ jobs:
               cat tmp.txt
             }
           done < post-list.txt
-          cat $RESULT_FILE
           if [ $status -eq 0 ]; then
             echo "All external links operational" >> $RESULT_FILE
           fi
