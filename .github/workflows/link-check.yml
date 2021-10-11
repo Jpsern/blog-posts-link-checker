@@ -66,8 +66,11 @@ jobs:
               echo "Fail {$status}"
               echo "Target {$url}"
               echo \#\# Target url: "$url" >> $RESULT_FILE
-              cat tmp.txt | grep 'BROKEN' >> $RESULT_FILE
-              cat tmp.txt | grep 'ERROR' --ignore-case >> $RESULT_FILE
+              echo \#\#\# Broken >> $RESULT_FILE
+              echo '* ' >> $RESULT_FILE
+              cat tmp.txt | grep 'BROKEN' | cut -c17- >> $RESULT_FILE
+              echo \#\#\# Error
+              cat tmp.txt | grep 'ERROR' --ignore-case | cut -c8- >> $RESULT_FILE
               echo >> $RESULT_FILE
 
               # BROKEN がなくてもエラーになるケースが稀にある
