@@ -80,6 +80,9 @@ jobs:
               cat tmp.txt
             }
           done < post-list.txt
+          if [ $status -ne 0 ]; then
+            echo "All external links operational" >> $RESULT_FILE
+          fi
           echo "status {$status}"
           echo "::set-output name=status::$status"
 
