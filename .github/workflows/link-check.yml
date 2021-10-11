@@ -65,10 +65,9 @@ jobs:
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-              echo \#\# Getting links from "$url" >> $RESULT_FILE
+              echo \#\# Target url: "$url" >> $RESULT_FILE
               cat tmp.txt | grep 'BROKEN' >> $RESULT_FILE
               cat tmp.txt | grep 'ERROR' --ignore-case >> $RESULT_FILE
-              echo "-----------------------" >> $RESULT_FILE
               echo >> $RESULT_FILE
 
               # BROKEN がなくてもエラーになるケースが稀にある
