@@ -8,7 +8,7 @@ const repo = process.env.TARGET_REPO;
     owner,
     repo,
     title: `Found broken links. (${process.env.CURRENT_DATE})`,
-    body: "# Details\nPlease refer to the link below.\nhttps://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.txt",
+    body: "# Details\nPlease refer to the link below.\nhttps://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.md",
     assignee: owner,
     labels: ['bug']
   });

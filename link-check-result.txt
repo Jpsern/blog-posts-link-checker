@@ -1,3 +1,10 @@
 Checked_date 2021-10-11 11:34:03(+0900)
 =========================
 
+リンクチェックの結果はマークダウンで記載するように変更しました。
+https://github.com/Jpsern/blog-posts-link-checker/pull/25
+
+この日以降のチェック結果は下記を確認してください。
+https://github.com/Jpsern/blog-posts-link-checker/blob/master/link-check-result.md
+
+このファイルは過去のチェック結果を残しておくため削除しません。

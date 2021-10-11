@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      RESULT_FILE: link-check-result.txt
+      RESULT_FILE: link-check-result.md
 
     steps:
       - uses: actions/checkout@v2
@@ -46,27 +46,31 @@ jobs:
         run: echo "::set-output name=date::$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')"
 
       # リンクチェック実行
-      # grepのヒット数が0件だとワークフローがエラーで止まってしまうので
-      # ちょっと無駄かもですがif文を挟んでヒットするかチェックするようにしています
       - name: Exec link-check
         id: linkCheck
         run: |
           set +e
           status=0
           touch $RESULT_FILE
-          echo "Checked_date ${{ steps.date.outputs.date }}" > $RESULT_FILE
-          echo "=========================" >> $RESULT_FILE
-          echo >> $RESULT_FILE
+          echo "---" > $RESULT_FILE
+          echo "Checked date: ${{ steps.date.outputs.date }}" >> $RESULT_FILE
+          echo "---" >> $RESULT_FILE
+          echo \# Link check result >> $RESULT_FILE
           while read url
           do
             npx blc -gi --requests 1 --user-agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1" --filter-level 0 "$url" > tmp.txt || {
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-              echo Getting links from "$url" >> $RESULT_FILE
-              cat tmp.txt | grep 'BROKEN' >> $RESULT_FILE
-              cat tmp.txt | grep 'ERROR' --ignore-case >> $RESULT_FILE
-              echo "-----------------------" >> $RESULT_FILE
+              echo \#\# Target url: "$url" >> $RESULT_FILE
+              if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
+                echo \#\#\# Broken >> $RESULT_FILE
+                cat tmp.txt | grep 'BROKEN' | cut -c17- | sed "s/^/\* /g" >> $RESULT_FILE
+              fi
+              if [ "`cat tmp.txt | grep 'ERROR' --ignore-case`" ]; then
+                echo \#\#\# Error >> $RESULT_FILE
+                cat tmp.txt | grep 'ERROR' --ignore-case | cut -c8- >> $RESULT_FILE
+              fi
               echo >> $RESULT_FILE
 
               # BROKEN がなくてもエラーになるケースが稀にある
@@ -74,6 +78,9 @@ jobs:
               cat tmp.txt
             }
           done < post-list.txt
+          if [ $status -eq 0 ]; then
+            echo "All external links operational" >> $RESULT_FILE
+          fi
           echo "status {$status}"
           echo "::set-output name=status::$status"
 
