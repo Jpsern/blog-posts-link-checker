@@ -10,5 +10,9 @@ const repo = process.env.TARGET_REPO;
     state: 'open',
     labels: ['bug', 'brokenlinks']
   });
-  console.log(data);
+  console.log(
+    data.map(value => {
+      value['number']
+    })
+  );
 })();
