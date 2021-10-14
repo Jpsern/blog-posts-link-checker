@@ -10,7 +10,13 @@ const repo = process.env.TARGET_REPO;
     state: 'open',
     labels: ['bug', 'brokenlinks']
   });
-  console.log(
-    data.map(value => value['number'])
-  );
+  const issueNumbers = data.map(value => value['number']);
+  issueNumbers.forEach(issue_number => {
+    await octokit.request("PATCH /repos/{owner}/{repo}/issues/{issue_number}", {
+      owner,
+      repo, 
+      issue_number,
+      state: 'closed'
+    }); 
+  });
 })();
