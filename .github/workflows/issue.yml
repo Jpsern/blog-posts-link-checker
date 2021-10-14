@@ -1,6 +1,6 @@
-# Issue発行のテストに使用していたCI
-# テストは終わったのでpushトリガーは削除しています
-name: Create Issue CI
+# Issueのテストに使用していたCI
+# 実運用には使いません
+name: Close Issue CI
 
 on:
   workflow_dispatch:
@@ -19,13 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(TZ=Asia/Tokyo date +'%Y-%m-%d')"
-
-      - name: Create Issue
-        run: node .github/scripts/create-issue.js
+      - name: Close Issue
+        run: node .github/scripts/close-issue.js
         env: 
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
-          CURRENT_DATE: ${{ steps.date.outputs.date }}
