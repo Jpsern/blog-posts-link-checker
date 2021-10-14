@@ -93,7 +93,7 @@ jobs:
           git commit -m "Update $RESULT_FILE"
           git push
 
-      # リンクチェックの結果次第でIssueを発行する
+      # リンクチェックが失敗した場合はIssueを発行する
       # メール通知してくれるので exit 1 も残しています。
       - name: Create Issue
         run: |
@@ -104,3 +104,13 @@ jobs:
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
           CURRENT_DATE: ${{ steps.date.outputs.date }}
         if: steps.linkCheck.outputs.status != 0
+
+      # リンクチェックが成功した場合は過去のIssueをクローズする
+      - name: Close Issue
+        run: |
+          node .github/scripts/close-issue.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
+          TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
+          CURRENT_DATE: ${{ steps.date.outputs.date }}
+        if: steps.linkCheck.outputs.status == 0
