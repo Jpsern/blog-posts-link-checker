@@ -6,7 +6,9 @@ const repo = process.env.TARGET_REPO;
 (async () => {
   const { data } = await octokit.request("GET /repos/{owner}/{repo}/issues", {
     owner,
-    repo
+    repo, 
+    state: 'open',
+    labels: ['bug', 'brokenlinks']
   });
   console.log(data);
 })();
