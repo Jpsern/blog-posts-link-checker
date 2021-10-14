@@ -12,6 +12,12 @@ const repo = process.env.TARGET_REPO;
   });
   const issueNumbers = data.map(value => value['number']);
   issueNumbers.forEach(issue_number => {
+    octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+        owner,
+        repo, 
+        issue_number,
+        body: 'This issue will be closed because the external link error has been resolved.'
+    });
     octokit.request("PATCH /repos/{owner}/{repo}/issues/{issue_number}", {
       owner,
       repo, 
