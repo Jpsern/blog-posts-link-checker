@@ -12,7 +12,7 @@ const repo = process.env.TARGET_REPO;
   });
   const issueNumbers = data.map(value => value['number']);
   issueNumbers.forEach(issue_number => {
-    await octokit.request("PATCH /repos/{owner}/{repo}/issues/{issue_number}", {
+    octokit.request("PATCH /repos/{owner}/{repo}/issues/{issue_number}", {
       owner,
       repo, 
       issue_number,
