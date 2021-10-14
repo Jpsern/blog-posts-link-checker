@@ -11,8 +11,6 @@ const repo = process.env.TARGET_REPO;
     labels: ['bug', 'brokenlinks']
   });
   console.log(
-    data.map(value => {
-      value['number']
-    })
+    data.map(value => value['number'])
   );
 })();
