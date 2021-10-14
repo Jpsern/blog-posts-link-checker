@@ -3,6 +3,9 @@
 name: Close Issue CI
 
 on:
+  push: 
+    branches: 
+      - feat/closeUnuseIssue
   workflow_dispatch:
 
 jobs:
