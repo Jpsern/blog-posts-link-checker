@@ -1,11 +1,11 @@
 # Issueのテストに使用していたCI
 # 実運用には使いません
-name: Close Issue CI
+name: Test Issue CI
 
 on:
-  push: 
-    branches: 
-      - feat/addLinkCheckResult2Issue
+  # push: 
+  #   branches: 
+  #     - feat/addLinkCheckResult2Issue
   workflow_dispatch:
 
 jobs:
