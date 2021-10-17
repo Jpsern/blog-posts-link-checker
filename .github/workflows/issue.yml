@@ -22,8 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Close Issue
-        run: node .github/scripts/close-issue.js
+      - name: Issue Control
+        run: node .github/scripts/create-issue.js
         env: 
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
+          CURRENT_DATE: '2021-10-18'
