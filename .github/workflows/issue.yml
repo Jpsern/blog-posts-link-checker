@@ -3,9 +3,9 @@
 name: Close Issue CI
 
 on:
-  # push: 
-  #   branches: 
-  #     - feat/closeUnuseIssue
+  push: 
+    branches: 
+      - feat/addLinkCheckResult2Issue
   workflow_dispatch:
 
 jobs:
