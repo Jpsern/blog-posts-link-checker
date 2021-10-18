@@ -54,7 +54,7 @@ jobs:
           touch $RESULT_FILE
           echo "|Checked date|" > $RESULT_FILE
           echo "|---|" >> $RESULT_FILE
-          echo "|${{ steps.date.outputs.date }}|" >> $RESULT_FILE
+          echo "|***${{ steps.date.outputs.date }}***|" >> $RESULT_FILE
           echo \# Link check result >> $RESULT_FILE
           while read url
           do
@@ -62,7 +62,8 @@ jobs:
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-              echo \#\# Target url: "$url" >> $RESULT_FILE
+              echo \#\# Target URL >> $RESULT_FILE
+              echo "$url" >> $RESULT_FILE
               if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
                 echo \#\#\# Broken >> $RESULT_FILE
                 cat tmp.txt | grep 'BROKEN' | cut -c17- | sed "s/^/\* /g" >> $RESULT_FILE
@@ -112,5 +113,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
-          CURRENT_DATE: ${{ steps.date.outputs.date }}
         if: steps.linkCheck.outputs.status == 0
