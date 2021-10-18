@@ -54,7 +54,7 @@ jobs:
           touch $RESULT_FILE
           echo "|Checked date|" > $RESULT_FILE
           echo "|---|" >> $RESULT_FILE
-          echo "|${{ steps.date.outputs.date }}|" >> $RESULT_FILE
+          echo "|***${{ steps.date.outputs.date }}***|" >> $RESULT_FILE
           echo \# Link check result >> $RESULT_FILE
           while read url
           do
