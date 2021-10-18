@@ -1,8 +1,5 @@
 ---
-Checked date: 2021-10-17 11:32:31(+0900)
+Checked date: 2021-10-18 11:36:40(+0900)
 ---
 # Link check result
-## Target url: https://jpsern.com/2019/10/04/music-game-status/
-### Broken
-* https://sp12.iidx.app/users/3389-1371 (HTTP_503)
-
+All external links operational
