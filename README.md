@@ -9,5 +9,11 @@ A tool that regularly checks for broken links on my blog. Checking work is done 
 ## URI
 https://jpsern.com
 
+## Past check results
+Currently only creating issues, and the check result file is not saved.
+
+- https://github.com/Jpsern/blog-posts-link-checker/commits/99a468ad86601ab994ba20f9ae4e6cf30132b22d/link-check-result.txt
+- https://github.com/Jpsern/blog-posts-link-checker/commits/99a468ad86601ab994ba20f9ae4e6cf30132b22d/link-check-result.md
+
 ## LICENSE
 https://github.com/Jpsern/blog-posts-link-checker/blob/master/LICENSE

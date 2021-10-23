@@ -14,13 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      # Gitの初期設定
-      - name: Git setting
-        run: sh .github/scripts/git_settings.sh
-        env:
-          REPOSITORY_OWNER: ${{ github.repository_owner }}
-          REPOSITORY_OWNER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }}
       
       # Node.js セットアップ
       # LTSの最新は14系なのでとりあえずそれで指定
@@ -84,15 +77,6 @@ jobs:
           fi
           echo "status {$status}"
           echo "::set-output name=status::$status"
-
-      # 結果はActions上だと見にくかったのでファイルで残しておく
-      # 最新の結果さえあれば良いので同じファイルを更新していく
-      # historyはGithubで確認できるので十分
-      - name: Commit result
-        run: |
-          git add $RESULT_FILE
-          git commit -m "Update $RESULT_FILE"
-          git push
 
       # リンクチェックが失敗した場合はIssueを発行する
       # メール通知してくれるので exit 1 も残しています。
