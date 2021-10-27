@@ -17,11 +17,11 @@ jobs:
       - uses: actions/checkout@v2
       
       # Node.js セットアップ
-      # LTSの最新は14系なのでとりあえずそれで指定
-      - name: Use Node.js 14.x
+      # LTSの最新は16系なのでとりあえずそれで指定
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
 
       # 必要なパッケージのインストール
       - name: Install dependencies
