@@ -10,17 +10,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      URL_LIST_FILE: post-list.txt
       RESULT_FILE: link-check-result.md
 
     steps:
       - uses: actions/checkout@v2
       
       # Node.js セットアップ
-      # LTSの最新は14系なのでとりあえずそれで指定
-      - name: Use Node.js 14.x
+      # LTSの最新は16系なのでとりあえずそれで指定
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
 
       # 必要なパッケージのインストール
       - name: Install dependencies
@@ -31,6 +32,11 @@ jobs:
       - name: Print version
         run: |
           npx blc --version
+
+      # サイトマップからURLリスト作成
+      - name: Create URL list
+        run: |
+          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > $URL_LIST_FILE
 
       # 結果ファイルやIssueに使う日付文字列の作成
       # https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
@@ -71,7 +77,7 @@ jobs:
               # Actions上に表示してデバッグするためcatする
               cat tmp.txt
             }
-          done < post-list.txt
+          done < $URL_LIST_FILE
           if [ $status -eq 0 ]; then
             echo "All external links operational" >> $RESULT_FILE
           fi

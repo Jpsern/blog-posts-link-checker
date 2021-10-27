@@ -1,9 +1,10 @@
 # リンクチェック対象リストを作成するCI
+# リンクチェックワークフロー内でこの動作を行うように変えたので現在は未使用
 name: Post list CI
 
 on:
-  schedule:
-    - cron: "0 1 * * *"
+  # schedule:
+  #   - cron: "0 1 * * *"
   workflow_dispatch:
 
 jobs:
