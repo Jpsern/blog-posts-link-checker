@@ -1,6 +1,6 @@
 # blog-posts-link-checker
 [![Link check CI](https://github.com/Jpsern/blog-posts-link-checker/actions/workflows/link-check.yml/badge.svg)](https://github.com/Jpsern/blog-posts-link-checker/actions/workflows/link-check.yml)
-[![GitHub repo size](https://img.shields.io/github/repo-size/Jpsern/blog-posts-link-checker)](https://api.github.com/repos/Jpsern/blog-posts-link-checker)
+[![Extend CI](https://github.com/Jpsern/blog-posts-link-checker/actions/workflows/extend.yml/badge.svg)](https://github.com/Jpsern/blog-posts-link-checker/actions/workflows/extend.yml)
 
 ## Summary
 A tool that regularly checks for broken links on my blog. Checking work is done automatically by GitHub Actions. See [workflows](https://github.com/Jpsern/blog-posts-link-checker/actions) for details.
