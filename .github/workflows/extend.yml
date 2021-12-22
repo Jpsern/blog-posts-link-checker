@@ -1,0 +1,24 @@
+# ワークフロー自動停止防止用
+# 一定周期毎に空コミットをし続ける
+name: Extend CI
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+jobs:
+  exec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Commit
+        run: |
+          # github-actions bot としてコミットするための設定
+          # https://github.com/actions/checkout/discussions/479
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit --allow-empty -m "chore: prevent automatic workflow stopping" -m "see: https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow"
+          git push
