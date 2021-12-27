@@ -15,9 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Git setting
-        run: |
-          sh .github/scripts/git_settings.sh
-          git config --list | grep user
+        run: sh .github/scripts/git_settings.sh
 
       - name: Commit and push
         run: |
