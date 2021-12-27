@@ -17,10 +17,7 @@ jobs:
       - name: Git setting
         run: |
           sh .github/scripts/git_settings.sh
-          git config --list
-        env:
-          USER_NAME: ${{ github.repository_owner }}
-          USER_EMAIL: ${{ secrets.REPOSITORY_OWNER_EMAIL }} 
+          git config --list | grep user
 
       # - name: Commit
       #   run: |
