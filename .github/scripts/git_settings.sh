@@ -3,11 +3,13 @@
 set -e
 
 if [ -z "$USER_NAME" ] && [ -z "$USER_EMAIL" ]; then
-  USER_NAME="github-actions[bot]" 
-  USER_EMAIL="github-actions[bot]@users.noreply.github.com" 
+    # github-actions bot としてコミットするための設定
+    # https://github.com/actions/checkout/discussions/479
+    USER_NAME="github-actions[bot]" 
+    USER_EMAIL="github-actions[bot]@users.noreply.github.com" 
 elif [ -z "$USER_EMAIL" ] || [ -z "$USER_NAME" ]; then
-  echo 'Not enough settings'
-  exit 1
+    echo 'Not enough settings'
+    exit 1
 fi
 
 git config --local user.email $USER_EMAIL
