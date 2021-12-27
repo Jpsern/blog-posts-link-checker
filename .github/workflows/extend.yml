@@ -19,14 +19,7 @@ jobs:
           sh .github/scripts/git_settings.sh
           git config --list | grep user
 
-      # - name: Commit
-      #   run: |
-      #     # github-actions bot としてコミットするための設定
-      #     # https://github.com/actions/checkout/discussions/479
-      #     git fetch origin
-      #     git checkout $(echo ${GITHUB_REF#refs/heads/})
-      #     git pull
-      #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
-      #     git config --local user.name "github-actions[bot]"
-      #     git commit --allow-empty -m "chore: prevent automatic workflow stopping" -m "see: https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow"
-      #     git push
+      - name: Commit and push
+        run: |
+          git commit --allow-empty -m "chore: prevent automatic workflow stopping" -m "see: https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow"
+          git push
