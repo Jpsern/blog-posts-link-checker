@@ -51,9 +51,9 @@ jobs:
           set +e
           status=0
           touch $RESULT_FILE
-          echo "|Checked date|" > $RESULT_FILE
-          echo "|---|" >> $RESULT_FILE
-          echo "|***${{ steps.date.outputs.date }}***|" >> $RESULT_FILE
+          echo "|Checked date|Actions url|" > $RESULT_FILE
+          echo "|---|---|" >> $RESULT_FILE
+          echo "|***${{ steps.date.outputs.date }}***|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|" >> $RESULT_FILE
           echo \# Link check result >> $RESULT_FILE
           while read url
           do
