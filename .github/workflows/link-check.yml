@@ -19,7 +19,7 @@ jobs:
       # Node.js セットアップ
       # LTSの最新は16系なのでとりあえずそれで指定
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16.x'
 
