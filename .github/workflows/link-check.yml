@@ -36,7 +36,7 @@ jobs:
       # サイトマップからURLリスト作成
       - name: Create URL list
         run: |
-          curl -fsSL https://jpsern.com/post-sitemap.xml |  grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > $URL_LIST_FILE
+          curl -fsSL https://jpsern.com/sitemap.xml | grep -v "/categories/" | grep -v "/tags/" | grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > $URL_LIST_FILE
 
       # 結果ファイルやIssueに使う日付文字列の作成
       # https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
