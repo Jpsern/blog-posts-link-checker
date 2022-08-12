@@ -5,9 +5,6 @@
 ## Summary
 A tool that regularly checks for broken links on my blog. Checking work is done automatically by GitHub Actions. See [workflows](https://github.com/Jpsern/blog-posts-link-checker/actions) for details.
 
-## URI
-https://jpsern.com
-
 ## Past check results
 Currently only creating issues, and the check result file is not saved.
 
