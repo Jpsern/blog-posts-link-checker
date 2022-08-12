@@ -2,6 +2,7 @@ const { URLSearchParams } = require('url');
 const fetch = require('node-fetch');
 const encodedParams = new URLSearchParams();
 const token = process.env.CHATWORK_TOKEN;
+const roomId = process.CHATWORK_ROOMID;
 const getLatestIssue = async () => {
     const { Octokit } = require("@octokit/action");
     const octokit = new Octokit();
@@ -25,7 +26,7 @@ ${getLatestIssue()}[/info]`;
     encodedParams.set('self_unread', '1'); // 既読にはしない
     encodedParams.set('body', message);
     
-    const url = 'https://api.chatwork.com/v2/rooms/room_id/messages';
+    const url = `https://api.chatwork.com/v2/rooms/${roomId}/messages`;
     const options = {
         method: 'POST',
         headers: {
