@@ -88,11 +88,9 @@ jobs:
           echo "::set-output name=status::$status"
 
       # リンクチェックが失敗した場合はIssueを発行する
-      # メール通知してくれるので exit 1 も残しています。
       - name: Create Issue
         run: |
           node .github/scripts/create-issue.js
-          exit 1
         env:
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
@@ -107,3 +105,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
           TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
         if: steps.linkCheck.outputs.status == 0
+
+      - name: Send Chatwork
+        run: |
+          node .github/scripts/chatwork.js
+        env:
+          CHATWORK_TOKEN: ${{ secrets.CHATWORK_TOKEN }}
+          CHATWORK_ROOMID: ${{ secrets.CHATWORK_ROOMID }}
+          GITHUB_TOKEN: ${{ secrets.BLC_ACCESS_TOKEN }}
+          TARGET_REPO: ${{ secrets.BLOG_REPOSITORY }}
+        if: steps.linkCheck.outputs.status != 0
