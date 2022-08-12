@@ -2,7 +2,7 @@ const { URLSearchParams } = require('url');
 const fetch = require('node-fetch');
 const encodedParams = new URLSearchParams();
 const token = process.env.CHATWORK_TOKEN;
-const roomId = process.CHATWORK_ROOMID;
+const roomId = process.env.CHATWORK_ROOMID;
 const getLatestIssue = async () => {
     const { Octokit } = require("@octokit/action");
     const octokit = new Octokit();
