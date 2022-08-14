@@ -55,8 +55,11 @@ jobs:
           echo "|---|---|" >> $RESULT_FILE
           echo "|***${{ steps.date.outputs.date }}***|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|" >> $RESULT_FILE
           echo \# Link check result >> $RESULT_FILE
+          TARGET_COUNT=$(cat $URL_LIST_FILE | grep -c ^)
+          COUNTER=1
           while read url
           do
+            echo "[ $COUNTER/$TARGET_COUNT ]"
             npx blc -gi --requests 1 \
               --exclude 'twitter.com/tommy0157/status' \
               --user-agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1" \
@@ -80,6 +83,7 @@ jobs:
               # Actions上に表示してデバッグするためcatする
               cat tmp.txt
             }
+            let COUNTER=COUNTER+1
           done < $URL_LIST_FILE
           if [ $status -eq 0 ]; then
             echo "All external links operational" >> $RESULT_FILE
