@@ -1,11 +1,11 @@
-const { Octokit } = require("@octokit/action");
-const octokit = new Octokit();
-const [ owner ] = process.env.GITHUB_REPOSITORY.split("/");
-const repo = process.env.TARGET_REPO;
-const fs = require("fs");
+import { Octokit } from "@octokit/action";
+import * as fs from 'fs';
 
 (async () => {
-  const { data } = await octokit.request("POST /repos/{owner}/{repo}/issues", {
+  const octokit = new Octokit();
+  const [ owner ] = process.env.GITHUB_REPOSITORY.split("/");
+  const repo = process.env.TARGET_REPO;
+  await octokit.request("POST /repos/{owner}/{repo}/issues", {
     owner,
     repo,
     title: `Found broken links. (${process.env.CURRENT_DATE})`,

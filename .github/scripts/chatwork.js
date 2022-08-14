@@ -1,10 +1,8 @@
-const { URLSearchParams } = require('url');
-const fetch = require('node-fetch');
-const encodedParams = new URLSearchParams();
-const token = process.env.CHATWORK_TOKEN;
-const roomId = process.env.CHATWORK_ROOMID;
+import { URLSearchParams } from 'url';
+import fetch from 'node-fetch';
+import { Octokit } from '@octokit/action';
+
 const getLatestIssue = async () => {
-    const { Octokit } = require("@octokit/action");
     const octokit = new Octokit();
     const [ owner ] = process.env.GITHUB_REPOSITORY.split("/");
     const repo = process.env.TARGET_REPO;
@@ -23,16 +21,16 @@ const message =
 ${getLatestIssue()}[/info]`;
 
 (() => {
+    const encodedParams = new URLSearchParams();
     encodedParams.set('self_unread', '1'); // 既読にはしない
     encodedParams.set('body', message);
-    
-    const url = `https://api.chatwork.com/v2/rooms/${roomId}/messages`;
+    const url = `https://api.chatwork.com/v2/rooms/${process.env.CHATWORK_ROOMID}/messages`;
     const options = {
         method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'X-ChatWorkToken': token
+            'X-ChatWorkToken': process.env.CHATWORK_TOKEN
         },
         body: encodedParams
     };
