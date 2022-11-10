@@ -20,7 +20,7 @@
   "dependencies": {
     "@octokit/action": "^4.0.10",
     "broken-link-checker": "^0.7.8",
-    "node-fetch": "^3.2.10",
+    "node-fetch": "^3.3.0",
     "outdent": "^0.8.0"
   }
 }
