@@ -61,7 +61,7 @@ jobs:
           do
             echo "[ $COUNTER/$TARGET_COUNT ]"
             npx blc -gi --requests 1 \
-              --exclude 'twitter.com/tommy0157/status' \
+              --exclude 'twitter.com' \
               --exclude 'docs.github.com' \
               --exclude 'https://www.net-fun.co.jp/SBJ777/spec.html' \
               --exclude 'cloudflare.com' \
