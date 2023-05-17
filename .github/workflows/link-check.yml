@@ -57,7 +57,7 @@ jobs:
           echo \# Link check result >> "$RESULT_FILE"
           TARGET_COUNT=$(cat "$URL_LIST_FILE" | grep -c ^)
           COUNTER=1
-          while read url
+          while read -r url
           do
             echo "[ $COUNTER/$TARGET_COUNT ]"
             npx blc -gi --requests 1 \
