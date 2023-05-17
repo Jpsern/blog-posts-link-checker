@@ -36,13 +36,13 @@ jobs:
       # サイトマップからURLリスト作成
       - name: Create URL list
         run: |
-          curl -fsSL https://jpsern.com/sitemap.xml | grep -v "/categories/" | grep -v "/tags/" | grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > $URL_LIST_FILE
+          curl -fsSL https://jpsern.com/sitemap.xml | grep -v "/categories/" | grep -v "/tags/" | grep "<loc" | sed -e "s/^.*<loc>//g;s/<\/loc>.*$//g" > "$URL_LIST_FILE"
 
       # 結果ファイルやIssueに使う日付文字列の作成
       # https://stackoverflow.com/questions/60942067/get-current-date-and-time-in-github-workflows
       - name: Get current date
         id: date
-        run: echo "date=$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')" >> $GITHUB_OUTPUT
+        run: echo "date=$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S(%z)')" >> "$GITHUB_OUTPUT"
 
       # リンクチェック実行
       - name: Exec link-check
@@ -50,12 +50,12 @@ jobs:
         run: |
           set +e
           status=0
-          touch $RESULT_FILE
-          echo "|Checked date|Actions url|" > $RESULT_FILE
-          echo "|---|---|" >> $RESULT_FILE
-          echo "|***${{ steps.date.outputs.date }}***|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|" >> $RESULT_FILE
-          echo \# Link check result >> $RESULT_FILE
-          TARGET_COUNT=$(cat $URL_LIST_FILE | grep -c ^)
+          touch "$RESULT_FILE"
+          echo "|Checked date|Actions url|" > "$RESULT_FILE"
+          echo "|---|---|" >> "$RESULT_FILE"
+          echo "|***${{ steps.date.outputs.date }}***|${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|" >> "$RESULT_FILE"
+          echo \# Link check result >> "$RESULT_FILE"
+          TARGET_COUNT=$(cat "$URL_LIST_FILE" | grep -c ^)
           COUNTER=1
           while read url
           do
@@ -70,17 +70,17 @@ jobs:
               status=$?
               echo "Fail {$status}"
               echo "Target {$url}"
-              echo \#\# Target URL >> $RESULT_FILE
-              echo "$url" >> $RESULT_FILE
+              echo \#\# Target URL >> "$RESULT_FILE"
+              echo "$url" >> "$RESULT_FILE"
               if [ "`cat tmp.txt | grep 'BROKEN'`" ]; then
-                echo \#\#\# Broken >> $RESULT_FILE
-                cat tmp.txt | grep 'BROKEN' | cut -c17- | sed "s/^/\* /g" >> $RESULT_FILE
+                echo \#\#\# Broken >> "$RESULT_FILE"
+                cat tmp.txt | grep 'BROKEN' | cut -c17- | sed "s/^/\* /g" >> "$RESULT_FILE"
               fi
               if [ "`cat tmp.txt | grep 'ERROR' --ignore-case`" ]; then
-                echo \#\#\# Error >> $RESULT_FILE
-                cat tmp.txt | grep 'ERROR' --ignore-case | cut -c8- >> $RESULT_FILE
+                echo \#\#\# Error >> "$RESULT_FILE"
+                cat tmp.txt | grep 'ERROR' --ignore-case | cut -c8- >> "$RESULT_FILE"
               fi
-              echo >> $RESULT_FILE
+              echo >> "$RESULT_FILE"
 
               # BROKEN がなくてもエラーになるケースが稀にある
               # Actions上に表示してデバッグするためcatする
@@ -89,10 +89,10 @@ jobs:
             let COUNTER=COUNTER+1
           done < $URL_LIST_FILE
           if [ $status -eq 0 ]; then
-            echo "All external links operational" >> $RESULT_FILE
+            echo "All external links operational" >> "$RESULT_FILE"
           fi
           echo "status {$status}"
-          echo "status=$status" >> $GITHUB_OUTPUT
+          echo "status=$status" >> "$GITHUB_OUTPUT"
 
       # リンクチェックが失敗した場合はIssueを発行する
       - name: Create Issue
