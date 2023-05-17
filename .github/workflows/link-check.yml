@@ -87,7 +87,7 @@ jobs:
               cat tmp.txt
             }
             let COUNTER=COUNTER+1
-          done < $URL_LIST_FILE
+          done < "$URL_LIST_FILE"
           if [ $status -eq 0 ]; then
             echo "All external links operational" >> "$RESULT_FILE"
           fi
