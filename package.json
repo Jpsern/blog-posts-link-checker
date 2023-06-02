@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Jpsern/blog-posts-link-checker#readme",
   "dependencies": {
-    "@octokit/action": "^5.0.5",
+    "@octokit/action": "^5.0.6",
     "broken-link-checker": "^0.7.8",
     "node-fetch": "^3.3.1",
     "outdent": "^0.8.0"
