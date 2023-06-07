@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-#     paths:
-#       - '.github/**'
+    paths:
+      - '.github/**/*.yml'
   workflow_dispatch:
 jobs:
   exec:
