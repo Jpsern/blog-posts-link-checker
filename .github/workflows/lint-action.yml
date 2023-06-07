@@ -1,8 +1,10 @@
 name: Actionlint CI
 on: 
   push:
-    paths:
-      - '.github/**'
+    branches:
+      - master
+#     paths:
+#       - '.github/**'
   workflow_dispatch:
 jobs:
   exec:
