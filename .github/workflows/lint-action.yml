@@ -2,7 +2,7 @@ name: Actionlint CI
 on: 
   push:
     paths:
-      - '.github/**.yml'
+      - '.github/**'
   workflow_dispatch:
 jobs:
   exec:
