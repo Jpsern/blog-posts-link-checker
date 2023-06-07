@@ -1,8 +1,6 @@
 name: Actionlint CI
 on: 
   push:
-    branches:
-      - feat/addActionsLinter
     paths:
       - '.github/**.yml'
   workflow_dispatch:
