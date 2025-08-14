@@ -14,7 +14,7 @@ jobs:
       RESULT_FILE: link-check-result.md
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       # Node.js セットアップ
       # LTSの最新は18系なのでとりあえずそれで指定
