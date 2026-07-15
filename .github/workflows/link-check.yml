@@ -18,7 +18,7 @@ jobs:
       
       # Node.js セットアップ
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '20.x'
 
